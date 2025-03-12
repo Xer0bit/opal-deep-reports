@@ -1247,3 +1247,498 @@ OSError: 'seaborn-whitegrid' is not a valid package style, path of style file, U
 2025-03-12 13:36:08,082 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
 2025-03-12 13:36:08,082 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
 2025-03-12 13:36:08,083 - app.services.predictive_analytics - INFO - Successfully processed 90 drivers
+2025-03-12 13:41:00,625 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:41:00,625 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:41:04,815 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:41:04,815 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:41:09,305 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 13:41:09,305 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 13:41:09,828 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 13:41:09,828 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 13:41:09,831 - app.services.predictive_analytics - INFO - Successfully processed 90 drivers
+2025-03-12 13:43:38,287 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:43:38,288 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:43:42,125 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:43:42,125 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:43:53,834 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 13:43:53,835 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 13:43:54,332 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 13:43:54,332 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 13:43:54,334 - app.services.predictive_analytics - INFO - Successfully processed 90 drivers
+2025-03-12 13:44:01,192 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 1 days
+2025-03-12 13:44:01,192 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 1 days
+2025-03-12 13:44:01,687 - app.db.repositories.data_repository - INFO - Retrieved stats for 80 drivers
+2025-03-12 13:44:01,687 - app.services.predictive_analytics - INFO - Retrieved 80 driver records
+2025-03-12 13:44:01,687 - app.services.predictive_analytics - INFO - Successfully processed 80 drivers
+2025-03-12 13:47:27,122 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:47:27,122 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:47:31,880 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:47:31,880 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:48:01,313 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:48:01,314 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:48:06,075 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:48:06,075 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:48:48,416 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:48:48,417 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:48:48,417 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:48:48,670 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:48:48,672 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:53:09,705 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:53:09,705 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:53:13,578 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:53:13,578 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:53:54,302 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 1 days
+2025-03-12 13:53:54,303 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 1 days
+2025-03-12 13:53:54,802 - app.db.repositories.data_repository - INFO - Retrieved stats for 80 drivers
+2025-03-12 13:53:54,802 - app.services.predictive_analytics - INFO - Retrieved 80 driver records
+2025-03-12 13:53:54,802 - app.services.predictive_analytics - ERROR - Error processing driver unknown: name 'avg_severity' is not defined
+2025-03-12 13:53:54,802 - app.services.predictive_analytics - ERROR - Error processing driver 10003423: name 'avg_severity' is not defined
+2025-03-12 13:53:54,802 - app.services.predictive_analytics - ERROR - Error processing driver 10009164: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 7463170a-de85-4c5d-a77b-b506d939aca1: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 10024125: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 10059296: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 10008570: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 3521914: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver ab007124-ab3c-4e74-9c14-2407e6e8975b: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 3394970: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 3dd80f61-5ed1-4038-b3a8-5d2e37759893: name 'avg_severity' is not defined
+2025-03-12 13:53:54,803 - app.services.predictive_analytics - ERROR - Error processing driver 3394909: name 'avg_severity' is not defined
+2025-03-12 13:53:54,805 - app.services.predictive_analytics - ERROR - Error processing driver 12689380: name 'avg_severity' is not defined
+2025-03-12 13:53:54,805 - app.services.predictive_analytics - ERROR - Error processing driver 4574031: name 'avg_severity' is not defined
+2025-03-12 13:53:54,805 - app.services.predictive_analytics - ERROR - Error processing driver 6283463: name 'avg_severity' is not defined
+2025-03-12 13:53:54,805 - app.services.predictive_analytics - ERROR - Error processing driver 5007978: name 'avg_severity' is not defined
+2025-03-12 13:53:54,805 - app.services.predictive_analytics - ERROR - Error processing driver 12990571: name 'avg_severity' is not defined
+2025-03-12 13:53:54,806 - app.services.predictive_analytics - ERROR - Error processing driver e889d91f-af57-48a5-a384-fdac719f7426: name 'avg_severity' is not defined
+2025-03-12 13:53:54,806 - app.services.predictive_analytics - ERROR - Error processing driver 7471302: name 'avg_severity' is not defined
+2025-03-12 13:53:54,806 - app.services.predictive_analytics - ERROR - Error processing driver 6739719: name 'avg_severity' is not defined
+2025-03-12 13:53:54,806 - app.services.predictive_analytics - ERROR - Error processing driver 12689366: name 'avg_severity' is not defined
+2025-03-12 13:53:54,806 - app.services.predictive_analytics - ERROR - Error processing driver 3169805: name 'avg_severity' is not defined
+2025-03-12 13:53:54,807 - app.services.predictive_analytics - ERROR - Error processing driver 3871197: name 'avg_severity' is not defined
+2025-03-12 13:53:54,807 - app.services.predictive_analytics - ERROR - Error processing driver 2736896: name 'avg_severity' is not defined
+2025-03-12 13:53:54,807 - app.services.predictive_analytics - ERROR - Error processing driver 7520050: name 'avg_severity' is not defined
+2025-03-12 13:53:54,807 - app.services.predictive_analytics - ERROR - Error processing driver 13435553: name 'avg_severity' is not defined
+2025-03-12 13:53:54,808 - app.services.predictive_analytics - ERROR - Error processing driver f12904ca-437d-4e12-aab7-a22285c60468: name 'avg_severity' is not defined
+2025-03-12 13:53:54,808 - app.services.predictive_analytics - ERROR - Error processing driver 6489124: name 'avg_severity' is not defined
+2025-03-12 13:53:54,808 - app.services.predictive_analytics - ERROR - Error processing driver 6449862: name 'avg_severity' is not defined
+2025-03-12 13:53:54,808 - app.services.predictive_analytics - ERROR - Error processing driver 7465620: name 'avg_severity' is not defined
+2025-03-12 13:53:54,809 - app.services.predictive_analytics - ERROR - Error processing driver 7445245: name 'avg_severity' is not defined
+2025-03-12 13:53:54,809 - app.services.predictive_analytics - ERROR - Error processing driver 4634857: name 'avg_severity' is not defined
+2025-03-12 13:53:54,809 - app.services.predictive_analytics - ERROR - Error processing driver 3165973: name 'avg_severity' is not defined
+2025-03-12 13:53:54,809 - app.services.predictive_analytics - ERROR - Error processing driver 4637003: name 'avg_severity' is not defined
+2025-03-12 13:53:54,809 - app.services.predictive_analytics - ERROR - Error processing driver e604d5c5-e1a6-45c3-b619-73393f04097c: name 'avg_severity' is not defined
+2025-03-12 13:53:54,809 - app.services.predictive_analytics - ERROR - Error processing driver 9580037: name 'avg_severity' is not defined
+2025-03-12 13:53:54,809 - app.services.predictive_analytics - ERROR - Error processing driver 13425227: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 3478830: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 3535546: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 4561513: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 72143e6d-e901-4c44-9795-71e0eed8758a: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 7704973: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 12689363: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 3521899: name 'avg_severity' is not defined
+2025-03-12 13:53:54,810 - app.services.predictive_analytics - ERROR - Error processing driver 10003181: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 13380096: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 12660341: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 13457552: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 3386077: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 10944837: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 11462831: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 7471351: name 'avg_severity' is not defined
+2025-03-12 13:53:54,811 - app.services.predictive_analytics - ERROR - Error processing driver 3450681: name 'avg_severity' is not defined
+2025-03-12 13:53:54,812 - app.services.predictive_analytics - ERROR - Error processing driver 3603687: name 'avg_severity' is not defined
+2025-03-12 13:53:54,812 - app.services.predictive_analytics - ERROR - Error processing driver 3494638: name 'avg_severity' is not defined
+2025-03-12 13:53:54,812 - app.services.predictive_analytics - ERROR - Error processing driver 3304180: name 'avg_severity' is not defined
+2025-03-12 13:53:54,812 - app.services.predictive_analytics - ERROR - Error processing driver 4626720: name 'avg_severity' is not defined
+2025-03-12 13:53:54,812 - app.services.predictive_analytics - ERROR - Error processing driver 6719417: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 5675671: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 3549223: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 6482426: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 13399355: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 13380081: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 4082833: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 9928039: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 10162055: name 'avg_severity' is not defined
+2025-03-12 13:53:54,813 - app.services.predictive_analytics - ERROR - Error processing driver 10003241: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 4596553: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 4748880: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 12686407: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 3613645: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 13408919: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 6211481: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 3402604: name 'avg_severity' is not defined
+2025-03-12 13:53:54,814 - app.services.predictive_analytics - ERROR - Error processing driver 12923083: name 'avg_severity' is not defined
+2025-03-12 13:53:54,815 - app.services.predictive_analytics - ERROR - Error processing driver 12660346: name 'avg_severity' is not defined
+2025-03-12 13:53:54,815 - app.services.predictive_analytics - ERROR - Error processing driver 13378634: name 'avg_severity' is not defined
+2025-03-12 13:53:54,815 - app.services.predictive_analytics - ERROR - Error processing driver 4616917: name 'avg_severity' is not defined
+2025-03-12 13:53:54,815 - app.services.predictive_analytics - INFO - Successfully processed 0 drivers
+2025-03-12 13:54:00,127 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 13:54:00,127 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 13:54:00,627 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 13:54:00,628 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 13:54:00,628 - app.services.predictive_analytics - ERROR - Error processing driver unknown: name 'avg_severity' is not defined
+2025-03-12 13:54:00,628 - app.services.predictive_analytics - ERROR - Error processing driver 3dd80f61-5ed1-4038-b3a8-5d2e37759893: name 'avg_severity' is not defined
+2025-03-12 13:54:00,628 - app.services.predictive_analytics - ERROR - Error processing driver 7463170a-de85-4c5d-a77b-b506d939aca1: name 'avg_severity' is not defined
+2025-03-12 13:54:00,628 - app.services.predictive_analytics - ERROR - Error processing driver ab007124-ab3c-4e74-9c14-2407e6e8975b: name 'avg_severity' is not defined
+2025-03-12 13:54:00,629 - app.services.predictive_analytics - ERROR - Error processing driver 10009164: name 'avg_severity' is not defined
+2025-03-12 13:54:00,629 - app.services.predictive_analytics - ERROR - Error processing driver 10003423: name 'avg_severity' is not defined
+2025-03-12 13:54:00,629 - app.services.predictive_analytics - ERROR - Error processing driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5: name 'avg_severity' is not defined
+2025-03-12 13:54:00,629 - app.services.predictive_analytics - ERROR - Error processing driver 10024125: name 'avg_severity' is not defined
+2025-03-12 13:54:00,629 - app.services.predictive_analytics - ERROR - Error processing driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12: name 'avg_severity' is not defined
+2025-03-12 13:54:00,629 - app.services.predictive_analytics - ERROR - Error processing driver 7471302: name 'avg_severity' is not defined
+2025-03-12 13:54:00,630 - app.services.predictive_analytics - ERROR - Error processing driver 12990571: name 'avg_severity' is not defined
+2025-03-12 13:54:00,630 - app.services.predictive_analytics - ERROR - Error processing driver 3394970: name 'avg_severity' is not defined
+2025-03-12 13:54:00,630 - app.services.predictive_analytics - ERROR - Error processing driver 9928039: name 'avg_severity' is not defined
+2025-03-12 13:54:00,630 - app.services.predictive_analytics - ERROR - Error processing driver 10008570: name 'avg_severity' is not defined
+2025-03-12 13:54:00,630 - app.services.predictive_analytics - ERROR - Error processing driver 10059296: name 'avg_severity' is not defined
+2025-03-12 13:54:00,630 - app.services.predictive_analytics - ERROR - Error processing driver 12689380: name 'avg_severity' is not defined
+2025-03-12 13:54:00,630 - app.services.predictive_analytics - ERROR - Error processing driver 3521914: name 'avg_severity' is not defined
+2025-03-12 13:54:00,631 - app.services.predictive_analytics - ERROR - Error processing driver 10003181: name 'avg_severity' is not defined
+2025-03-12 13:54:00,631 - app.services.predictive_analytics - ERROR - Error processing driver 3871197: name 'avg_severity' is not defined
+2025-03-12 13:54:00,631 - app.services.predictive_analytics - ERROR - Error processing driver 3394909: name 'avg_severity' is not defined
+2025-03-12 13:54:00,631 - app.services.predictive_analytics - ERROR - Error processing driver 12689366: name 'avg_severity' is not defined
+2025-03-12 13:54:00,631 - app.services.predictive_analytics - ERROR - Error processing driver 5007978: name 'avg_severity' is not defined
+2025-03-12 13:54:00,632 - app.services.predictive_analytics - ERROR - Error processing driver 3169805: name 'avg_severity' is not defined
+2025-03-12 13:54:00,632 - app.services.predictive_analytics - ERROR - Error processing driver e889d91f-af57-48a5-a384-fdac719f7426: name 'avg_severity' is not defined
+2025-03-12 13:54:00,632 - app.services.predictive_analytics - ERROR - Error processing driver 6739719: name 'avg_severity' is not defined
+2025-03-12 13:54:00,632 - app.services.predictive_analytics - ERROR - Error processing driver 4574031: name 'avg_severity' is not defined
+2025-03-12 13:54:00,632 - app.services.predictive_analytics - ERROR - Error processing driver 10003241: name 'avg_severity' is not defined
+2025-03-12 13:54:00,632 - app.services.predictive_analytics - ERROR - Error processing driver 3521899: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver 6283463: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver 4748880: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver 6489124: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver 13378634: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver e604d5c5-e1a6-45c3-b619-73393f04097c: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver 2736896: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver 7445245: name 'avg_severity' is not defined
+2025-03-12 13:54:00,633 - app.services.predictive_analytics - ERROR - Error processing driver 13435553: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 12689363: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver f12904ca-437d-4e12-aab7-a22285c60468: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 3535546: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 12660346: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 3165973: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 13425227: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 9580037: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 7520050: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 4637003: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 6449862: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 7465620: name 'avg_severity' is not defined
+2025-03-12 13:54:00,634 - app.services.predictive_analytics - ERROR - Error processing driver 4626720: name 'avg_severity' is not defined
+2025-03-12 13:54:00,636 - app.services.predictive_analytics - ERROR - Error processing driver 3494638: name 'avg_severity' is not defined
+2025-03-12 13:54:00,636 - app.services.predictive_analytics - ERROR - Error processing driver 7704973: name 'avg_severity' is not defined
+2025-03-12 13:54:00,636 - app.services.predictive_analytics - ERROR - Error processing driver 3549223: name 'avg_severity' is not defined
+2025-03-12 13:54:00,636 - app.services.predictive_analytics - ERROR - Error processing driver 11462831: name 'avg_severity' is not defined
+2025-03-12 13:54:00,636 - app.services.predictive_analytics - ERROR - Error processing driver 3478830: name 'avg_severity' is not defined
+2025-03-12 13:54:00,636 - app.services.predictive_analytics - ERROR - Error processing driver 4634857: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 6211481: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 4561513: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 10944837: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 13380096: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 72143e6d-e901-4c44-9795-71e0eed8758a: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 3450681: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 13457552: name 'avg_severity' is not defined
+2025-03-12 13:54:00,637 - app.services.predictive_analytics - ERROR - Error processing driver 3603687: name 'avg_severity' is not defined
+2025-03-12 13:54:00,638 - app.services.predictive_analytics - ERROR - Error processing driver 13399355: name 'avg_severity' is not defined
+2025-03-12 13:54:00,638 - app.services.predictive_analytics - ERROR - Error processing driver 12660341: name 'avg_severity' is not defined
+2025-03-12 13:54:00,638 - app.services.predictive_analytics - ERROR - Error processing driver 3304180: name 'avg_severity' is not defined
+2025-03-12 13:54:00,638 - app.services.predictive_analytics - ERROR - Error processing driver 13380081: name 'avg_severity' is not defined
+2025-03-12 13:54:00,638 - app.services.predictive_analytics - ERROR - Error processing driver 5675671: name 'avg_severity' is not defined
+2025-03-12 13:54:00,638 - app.services.predictive_analytics - ERROR - Error processing driver 13394592: name 'avg_severity' is not defined
+2025-03-12 13:54:00,639 - app.services.predictive_analytics - ERROR - Error processing driver 3386077: name 'avg_severity' is not defined
+2025-03-12 13:54:00,639 - app.services.predictive_analytics - ERROR - Error processing driver 6719417: name 'avg_severity' is not defined
+2025-03-12 13:54:00,639 - app.services.predictive_analytics - ERROR - Error processing driver 7471351: name 'avg_severity' is not defined
+2025-03-12 13:54:00,639 - app.services.predictive_analytics - ERROR - Error processing driver 1227148: name 'avg_severity' is not defined
+2025-03-12 13:54:00,640 - app.services.predictive_analytics - ERROR - Error processing driver 13408919: name 'avg_severity' is not defined
+2025-03-12 13:54:00,640 - app.services.predictive_analytics - ERROR - Error processing driver 6482426: name 'avg_severity' is not defined
+2025-03-12 13:54:00,640 - app.services.predictive_analytics - ERROR - Error processing driver 3402604: name 'avg_severity' is not defined
+2025-03-12 13:54:00,640 - app.services.predictive_analytics - ERROR - Error processing driver 3613645: name 'avg_severity' is not defined
+2025-03-12 13:54:00,640 - app.services.predictive_analytics - ERROR - Error processing driver 12686407: name 'avg_severity' is not defined
+2025-03-12 13:54:00,640 - app.services.predictive_analytics - ERROR - Error processing driver 9480756: name 'avg_severity' is not defined
+2025-03-12 13:54:00,640 - app.services.predictive_analytics - ERROR - Error processing driver 4082833: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 4596553: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 10162055: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 4616917: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 6477408: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 12854230: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 12923083: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 12861265: name 'avg_severity' is not defined
+2025-03-12 13:54:00,641 - app.services.predictive_analytics - ERROR - Error processing driver 12454992: name 'avg_severity' is not defined
+2025-03-12 13:54:00,642 - app.services.predictive_analytics - ERROR - Error processing driver 4573744: name 'avg_severity' is not defined
+2025-03-12 13:54:00,642 - app.services.predictive_analytics - ERROR - Error processing driver 974227: name 'avg_severity' is not defined
+2025-03-12 13:54:00,642 - app.services.predictive_analytics - ERROR - Error processing driver 10975821: name 'avg_severity' is not defined
+2025-03-12 13:54:00,642 - app.services.predictive_analytics - INFO - Successfully processed 0 drivers
+2025-03-12 13:55:36,742 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:55:36,743 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:55:40,479 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:55:40,480 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:55:45,358 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 13:55:45,359 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 13:55:45,888 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 13:55:45,888 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 13:55:45,889 - app.services.predictive_analytics - INFO - Successfully processed 90 drivers
+2025-03-12 14:01:30,611 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:01:30,612 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:01:34,476 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:01:34,476 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:01:48,257 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 14:01:48,258 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 14:01:48,783 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 14:01:48,784 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 14:01:48,784 - app.services.predictive_analytics - ERROR - Error processing driver unknown: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,784 - app.services.predictive_analytics - ERROR - Error processing driver 3dd80f61-5ed1-4038-b3a8-5d2e37759893: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,784 - app.services.predictive_analytics - ERROR - Error processing driver 7463170a-de85-4c5d-a77b-b506d939aca1: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,785 - app.services.predictive_analytics - ERROR - Error processing driver ab007124-ab3c-4e74-9c14-2407e6e8975b: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,785 - app.services.predictive_analytics - ERROR - Error processing driver 10009164: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,785 - app.services.predictive_analytics - ERROR - Error processing driver 10003423: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,785 - app.services.predictive_analytics - ERROR - Error processing driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,786 - app.services.predictive_analytics - ERROR - Error processing driver 10024125: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,786 - app.services.predictive_analytics - ERROR - Error processing driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,786 - app.services.predictive_analytics - ERROR - Error processing driver 12990571: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,786 - app.services.predictive_analytics - ERROR - Error processing driver 7471302: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,787 - app.services.predictive_analytics - ERROR - Error processing driver 3394970: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,787 - app.services.predictive_analytics - ERROR - Error processing driver 9928039: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,787 - app.services.predictive_analytics - ERROR - Error processing driver 10008570: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,787 - app.services.predictive_analytics - ERROR - Error processing driver 10059296: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,788 - app.services.predictive_analytics - ERROR - Error processing driver 12689380: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,788 - app.services.predictive_analytics - ERROR - Error processing driver 3521914: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,788 - app.services.predictive_analytics - ERROR - Error processing driver 10003181: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,788 - app.services.predictive_analytics - ERROR - Error processing driver 3871197: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,789 - app.services.predictive_analytics - ERROR - Error processing driver 3394909: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,789 - app.services.predictive_analytics - ERROR - Error processing driver 12689366: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,789 - app.services.predictive_analytics - ERROR - Error processing driver 3169805: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,789 - app.services.predictive_analytics - ERROR - Error processing driver 5007978: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,789 - app.services.predictive_analytics - ERROR - Error processing driver e889d91f-af57-48a5-a384-fdac719f7426: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,789 - app.services.predictive_analytics - ERROR - Error processing driver 6739719: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,790 - app.services.predictive_analytics - ERROR - Error processing driver 4574031: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,790 - app.services.predictive_analytics - ERROR - Error processing driver 10003241: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,790 - app.services.predictive_analytics - ERROR - Error processing driver 3521899: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,790 - app.services.predictive_analytics - ERROR - Error processing driver 6283463: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,790 - app.services.predictive_analytics - ERROR - Error processing driver 4748880: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,790 - app.services.predictive_analytics - ERROR - Error processing driver 6489124: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,790 - app.services.predictive_analytics - ERROR - Error processing driver 13378634: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,791 - app.services.predictive_analytics - ERROR - Error processing driver e604d5c5-e1a6-45c3-b619-73393f04097c: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,791 - app.services.predictive_analytics - ERROR - Error processing driver 2736896: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,791 - app.services.predictive_analytics - ERROR - Error processing driver 12689363: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,791 - app.services.predictive_analytics - ERROR - Error processing driver 13435553: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,791 - app.services.predictive_analytics - ERROR - Error processing driver 7445245: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,791 - app.services.predictive_analytics - ERROR - Error processing driver 12660346: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,791 - app.services.predictive_analytics - ERROR - Error processing driver 3535546: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,792 - app.services.predictive_analytics - ERROR - Error processing driver f12904ca-437d-4e12-aab7-a22285c60468: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,792 - app.services.predictive_analytics - ERROR - Error processing driver 3165973: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,792 - app.services.predictive_analytics - ERROR - Error processing driver 13425227: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,792 - app.services.predictive_analytics - ERROR - Error processing driver 9580037: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,792 - app.services.predictive_analytics - ERROR - Error processing driver 7520050: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,792 - app.services.predictive_analytics - ERROR - Error processing driver 4637003: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,793 - app.services.predictive_analytics - ERROR - Error processing driver 6449862: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,793 - app.services.predictive_analytics - ERROR - Error processing driver 4626720: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,793 - app.services.predictive_analytics - ERROR - Error processing driver 7465620: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,793 - app.services.predictive_analytics - ERROR - Error processing driver 11462831: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,795 - app.services.predictive_analytics - ERROR - Error processing driver 4634857: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,795 - app.services.predictive_analytics - ERROR - Error processing driver 3478830: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,795 - app.services.predictive_analytics - ERROR - Error processing driver 3549223: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,795 - app.services.predictive_analytics - ERROR - Error processing driver 7704973: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,795 - app.services.predictive_analytics - ERROR - Error processing driver 3494638: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,796 - app.services.predictive_analytics - ERROR - Error processing driver 6211481: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,796 - app.services.predictive_analytics - ERROR - Error processing driver 10944837: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,796 - app.services.predictive_analytics - ERROR - Error processing driver 4561513: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,796 - app.services.predictive_analytics - ERROR - Error processing driver 13380096: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,796 - app.services.predictive_analytics - ERROR - Error processing driver 72143e6d-e901-4c44-9795-71e0eed8758a: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,796 - app.services.predictive_analytics - ERROR - Error processing driver 3603687: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,796 - app.services.predictive_analytics - ERROR - Error processing driver 13399355: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 3450681: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 12660341: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 13457552: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 13380081: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 3304180: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 13394592: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 5675671: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 3386077: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 6719417: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 7471351: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,797 - app.services.predictive_analytics - ERROR - Error processing driver 4082833: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,798 - app.services.predictive_analytics - ERROR - Error processing driver 12686407: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,798 - app.services.predictive_analytics - ERROR - Error processing driver 13408919: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,798 - app.services.predictive_analytics - ERROR - Error processing driver 1227148: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,798 - app.services.predictive_analytics - ERROR - Error processing driver 3402604: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,798 - app.services.predictive_analytics - ERROR - Error processing driver 3613645: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,798 - app.services.predictive_analytics - ERROR - Error processing driver 9480756: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,798 - app.services.predictive_analytics - ERROR - Error processing driver 6482426: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,799 - app.services.predictive_analytics - ERROR - Error processing driver 4573744: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,799 - app.services.predictive_analytics - ERROR - Error processing driver 12854230: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,799 - app.services.predictive_analytics - ERROR - Error processing driver 4616917: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,799 - app.services.predictive_analytics - ERROR - Error processing driver 10162055: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,799 - app.services.predictive_analytics - ERROR - Error processing driver 974227: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,799 - app.services.predictive_analytics - ERROR - Error processing driver 12454992: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,800 - app.services.predictive_analytics - ERROR - Error processing driver 6477408: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,800 - app.services.predictive_analytics - ERROR - Error processing driver 12923083: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,800 - app.services.predictive_analytics - ERROR - Error processing driver 4596553: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,800 - app.services.predictive_analytics - ERROR - Error processing driver 10975821: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,800 - app.services.predictive_analytics - ERROR - Error processing driver 12861265: cannot access local variable 'days_since_last' where it is not associated with a value
+2025-03-12 14:01:48,801 - app.services.predictive_analytics - INFO - Successfully processed 0 drivers
+2025-03-12 14:03:48,126 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:03:48,126 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:03:52,114 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:03:52,114 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:03:57,661 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 14:03:57,662 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 14:03:58,460 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 14:03:58,460 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 14:03:58,462 - app.services.predictive_analytics - INFO - Successfully processed 90 drivers
+2025-03-12 14:05:31,918 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:05:31,918 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:05:36,227 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:05:36,228 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:05:43,693 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 14:05:43,694 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 14:05:44,369 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 14:05:44,370 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 14:05:44,370 - app.services.predictive_analytics - INFO - Successfully processed 9 drivers
+2025-03-12 14:06:01,272 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 6 days
+2025-03-12 14:06:01,272 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 6 days
+2025-03-12 14:06:02,267 - app.db.repositories.data_repository - INFO - Retrieved stats for 113 drivers
+2025-03-12 14:06:02,268 - app.services.predictive_analytics - INFO - Retrieved 113 driver records
+2025-03-12 14:06:02,268 - app.services.predictive_analytics - INFO - Successfully processed 9 drivers
+2025-03-12 14:08:05,633 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:08:05,634 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:08:10,318 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:08:10,318 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:08:34,170 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 6 days
+2025-03-12 14:08:34,171 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 6 days
+2025-03-12 14:08:35,096 - app.db.repositories.data_repository - INFO - Retrieved stats for 113 drivers
+2025-03-12 14:08:35,096 - app.services.predictive_analytics - INFO - Retrieved 113 driver records
+2025-03-12 14:08:35,096 - app.services.predictive_analytics - INFO - Successfully processed 9 drivers
+2025-03-12 14:17:21,321 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:17:21,321 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:17:30,469 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:17:30,470 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:17:44,671 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 6 days
+2025-03-12 14:17:44,672 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 6 days
+2025-03-12 14:17:45,580 - app.db.repositories.data_repository - INFO - Retrieved stats for 113 drivers
+2025-03-12 14:17:45,581 - app.services.predictive_analytics - INFO - Retrieved 113 driver records
+2025-03-12 14:17:45,581 - app.services.predictive_analytics - INFO - Successfully processed 9 drivers
+2025-03-12 14:19:58,273 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:19:58,273 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:20:02,412 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:20:02,413 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:21:34,289 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:21:34,290 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:21:38,170 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:21:38,171 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:22:49,631 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:22:49,631 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:22:53,710 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:22:53,711 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:24:55,799 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:24:55,799 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:25:00,321 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:25:00,321 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:27:59,755 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:27:59,755 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:28:04,044 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:28:04,044 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:55:10,083 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:55:10,083 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:55:14,676 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 14:55:14,676 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 14:55:26,264 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 12, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid=''
+2025-03-12 14:55:26,265 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-12 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00
+2025-03-12 14:55:26,265 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-12 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00
+2025-03-12 14:55:26,521 - app.db.repositories.data_repository - INFO - Found 0 trend records
+2025-03-12 14:55:26,522 - app.services.predictive_analytics - INFO - Processed 0 time period-driver combinations
+2025-03-12 14:55:55,846 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 12, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 14:55:55,846 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-12 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:55:55,848 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-12 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:55:56,100 - app.db.repositories.data_repository - INFO - Found 0 trend records
+2025-03-12 14:55:56,100 - app.services.predictive_analytics - INFO - Processed 0 time period-driver combinations
+2025-03-12 14:56:13,526 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 5, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 14:56:13,526 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-05 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:56:13,526 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-05 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:56:13,780 - app.db.repositories.data_repository - INFO - Found 16 trend records
+2025-03-12 14:56:13,780 - app.services.predictive_analytics - INFO - Processed 8 time period-driver combinations
+2025-03-12 14:56:55,939 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 5, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) group_by='day' days=0 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 14:56:55,939 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-05 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:56:55,939 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-05 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:56:56,193 - app.db.repositories.data_repository - INFO - Found 16 trend records
+2025-03-12 14:56:56,193 - app.services.predictive_analytics - INFO - Processed 8 time period-driver combinations
+2025-03-12 14:59:18,840 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 5, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 9, 55, 19, 852000, tzinfo=TzInfo(UTC)) group_by='day' days=0 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 14:59:18,840 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-05 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:59:18,841 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-05 09:55:19.852000+00:00 to 2025-03-12 09:55:19.852000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 14:59:19,094 - app.db.repositories.data_repository - INFO - Found 16 trend records
+2025-03-12 14:59:19,094 - app.services.predictive_analytics - INFO - Processed 8 time period-driver combinations
+2025-03-12 14:59:23,175 - fontTools.subset - INFO - maxp pruned
+2025-03-12 14:59:23,175 - fontTools.subset - INFO - cmap pruned
+2025-03-12 14:59:23,182 - fontTools.subset - INFO - post pruned
+2025-03-12 14:59:23,184 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 14:59:23,184 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 14:59:23,184 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 14:59:23,241 - fontTools.subset - INFO - glyf pruned
+2025-03-12 14:59:23,241 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 14:59:23,242 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 14:59:23,242 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 14:59:23,242 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 14:59:23,243 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 14:59:23,243 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 14:59:23,244 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 14:59:23,245 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 14:59:23,245 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 14:59:23,245 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 14:59:23,245 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 14:59:23,246 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 14:59:23,246 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 14:59:23,246 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 14:59:23,246 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 14:59:23,247 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 14:59:23,247 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 14:59:23,247 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 14:59:23,247 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 14:59:23,247 - fontTools.subset - INFO - post subsetted
+2025-03-12 14:59:23,248 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 14:59:23,248 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 14:59:23,248 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 14:59:23,249 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 14:59:23,249 - fontTools.subset - INFO - head pruned
+2025-03-12 14:59:23,250 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 14:59:23,250 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 14:59:23,251 - fontTools.subset - INFO - glyf pruned
+2025-03-12 14:59:23,252 - fontTools.subset - INFO - name pruned
+2025-03-12 14:59:23,265 - fontTools.subset - INFO - maxp pruned
+2025-03-12 14:59:23,266 - fontTools.subset - INFO - cmap pruned
+2025-03-12 14:59:23,266 - fontTools.subset - INFO - post pruned
+2025-03-12 14:59:23,266 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 14:59:23,266 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 14:59:23,267 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 14:59:23,268 - fontTools.subset - INFO - glyf pruned
+2025-03-12 14:59:23,269 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 14:59:23,269 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 14:59:23,269 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 14:59:23,269 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 14:59:23,269 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 14:59:23,269 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 14:59:23,270 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 14:59:23,270 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 14:59:23,270 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 14:59:23,271 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 14:59:23,271 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 14:59:23,271 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 14:59:23,272 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 14:59:23,272 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 14:59:23,272 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 14:59:23,273 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 14:59:23,273 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 14:59:23,273 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 14:59:23,273 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 14:59:23,273 - fontTools.subset - INFO - post subsetted
+2025-03-12 14:59:23,273 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 14:59:23,274 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 14:59:23,274 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 14:59:23,274 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 14:59:23,275 - fontTools.subset - INFO - head pruned
+2025-03-12 14:59:23,275 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 14:59:23,275 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 14:59:23,277 - fontTools.subset - INFO - glyf pruned
+2025-03-12 14:59:23,278 - fontTools.subset - INFO - name pruned
+2025-03-12 15:00:38,143 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 90 days
+2025-03-12 15:00:38,143 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 90 days
+2025-03-12 15:00:38,917 - app.db.repositories.data_repository - INFO - Retrieved stats for 121 drivers
+2025-03-12 15:00:38,918 - app.services.predictive_analytics - INFO - Retrieved 121 driver records
+2025-03-12 15:00:38,918 - app.services.predictive_analytics - INFO - Successfully processed 9 drivers

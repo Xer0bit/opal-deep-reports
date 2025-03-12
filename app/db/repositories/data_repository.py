@@ -28,10 +28,15 @@ class DataRepository:
         db = await self.get_database()
         query = {}
         if time_range:
-            query["deviceTime"] = time_range
+            query["timestamp"] = time_range
         if vehicle_uuid:
             query["vehicle.uuid"] = vehicle_uuid
-        return await db.vehicleevents.find(query).limit(limit).to_list(length=limit)
+        try:
+            cursor = db.vehicleevents.find(query).limit(limit)
+            return await cursor.to_list(length=limit)
+        except Exception as e:
+            logger.error(f"Error fetching vehicle events: {str(e)}")
+            return []
 
     async def get_violations(self, start_date: datetime = None, end_date: datetime = None, 
                            time_range: Dict = None, filters: Dict = None, limit: int = 1000):
@@ -41,11 +46,16 @@ class DataRepository:
         if start_date and end_date:
             query["timestamp"] = {"$gte": start_date, "$lte": end_date}
         elif time_range:
-            query["event_time"] = time_range
+            query["timestamp"] = time_range
         if filters:
             query.update(filters)
             
-        return await db.violations.find(query).limit(limit).to_list(length=limit)
+        try:
+            cursor = db.violations.find(query).limit(limit)
+            return await cursor.to_list(length=limit)
+        except Exception as e:
+            logger.error(f"Error fetching violations: {str(e)}")
+            return []
 
     async def get_violation_trends(self, group_by: str = "hour", start_date: datetime = None, 
                                  end_date: datetime = None, driver_uuid: str = None):
