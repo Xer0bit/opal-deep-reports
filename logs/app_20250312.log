@@ -1,0 +1,1249 @@
+2025-03-12 12:12:22,818 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 90 days
+2025-03-12 12:12:22,820 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 90 days
+2025-03-12 12:12:24,313 - app.db.repositories.data_repository - INFO - Found 0 violations
+2025-03-12 12:12:24,560 - app.db.repositories.data_repository - INFO - Retrieved stats for 0 drivers
+2025-03-12 12:12:24,560 - app.services.predictive_analytics - INFO - Retrieved 0 driver records
+2025-03-12 12:12:24,561 - app.services.predictive_analytics - WARNING - No driver data found
+2025-03-12 12:18:29,290 - app.db.repositories.data_repository - INFO - Found 30 trend records
+2025-03-12 12:20:15,718 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-02-10 12:20:15.718175 to 2025-03-12 12:20:15.718175
+2025-03-12 12:20:15,988 - app.db.repositories.data_repository - INFO - Found 30 trend records
+2025-03-12 12:20:15,989 - app.services.predictive_analytics - INFO - Processed 10 time periods
+2025-03-12 12:22:08,224 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-02-10 12:22:08.224082 to 2025-03-12 12:22:08.224082
+2025-03-12 12:22:08,490 - app.db.repositories.data_repository - INFO - Found 30 trend records
+2025-03-12 12:22:08,490 - app.services.predictive_analytics - INFO - Processed 10 time periods
+2025-03-12 12:24:52,291 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-02-10 12:24:52.291583 to 2025-03-12 12:24:52.291583
+2025-03-12 12:24:53,070 - app.db.repositories.data_repository - INFO - Found 304 trend records
+2025-03-12 12:24:53,071 - app.services.predictive_analytics - INFO - Processed 121 records
+2025-03-12 12:25:55,556 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-08 12:25:55.556747 to 2025-03-12 12:25:55.556747
+2025-03-12 12:25:56,447 - app.db.repositories.data_repository - INFO - Found 232 trend records
+2025-03-12 12:25:56,447 - app.services.predictive_analytics - INFO - Processed 104 records
+2025-03-12 12:27:38,607 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-02-10 12:27:38.607744 to 2025-03-12 12:27:38.607744
+2025-03-12 12:27:39,356 - app.db.repositories.data_repository - INFO - Found 304 trend records
+2025-03-12 12:27:39,357 - app.services.predictive_analytics - INFO - Processed 121 records
+2025-03-12 12:34:05,580 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:34:05,581 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:34:07,632 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:34:07,633 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:34:16,186 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 11, 7, 13, 57, 482000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 13, 57, 482000, tzinfo=TzInfo(UTC)) group_by='driver' days=30
+2025-03-12 12:34:16,186 - app.api.endpoints.reports - INFO - Analyzing trends from 2025-03-11 07:13:57.482000+00:00 to 2025-03-12 07:13:57.482000+00:00
+2025-03-12 12:34:16,186 - app.api.endpoints.reports - ERROR - Error analyzing violation trends: analyze_violation_trends() got an unexpected keyword argument 'start_date'
+Traceback (most recent call last):
+  File "E:\Office\Opal\deep reports\app\api\endpoints\reports.py", line 37, in get_violation_trends
+    trends = await analyze_violation_trends(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: analyze_violation_trends() got an unexpected keyword argument 'start_date'
+2025-03-12 12:35:23,528 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:35:23,528 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:35:26,224 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 11, 7, 13, 57, 482000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 13, 57, 482000, tzinfo=TzInfo(UTC)) group_by='driver' days=30
+2025-03-12 12:35:26,225 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-11 07:13:57.482000+00:00 to 2025-03-12 07:13:57.482000+00:00
+2025-03-12 12:35:26,225 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-11 07:13:57.482000+00:00 to 2025-03-12 07:13:57.482000+00:00
+2025-03-12 12:35:26,972 - app.db.repositories.data_repository - INFO - Found 156 trend records
+2025-03-12 12:35:26,972 - app.services.predictive_analytics - INFO - Processed 82 records
+2025-03-12 12:36:48,950 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 90 days
+2025-03-12 12:36:48,950 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 90 days
+2025-03-12 12:36:49,709 - app.db.repositories.data_repository - INFO - Retrieved stats for 121 drivers
+2025-03-12 12:36:49,711 - app.services.predictive_analytics - INFO - Retrieved 121 driver records
+2025-03-12 12:36:49,712 - app.services.predictive_analytics - INFO - Successfully processed 121 drivers
+2025-03-12 12:37:43,279 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:37:43,280 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:38:26,555 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:38:26,555 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:38:33,149 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='string'
+2025-03-12 12:38:33,149 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-12 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:38:33,150 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-12 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:38:33,402 - app.db.repositories.data_repository - INFO - Found 0 trend records
+2025-03-12 12:38:33,402 - app.services.predictive_analytics - INFO - Processed 0 time periods
+2025-03-12 12:38:42,665 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 12:38:42,665 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-12 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:38:42,665 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-12 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:38:42,916 - app.db.repositories.data_repository - INFO - Found 0 trend records
+2025-03-12 12:38:42,916 - app.services.predictive_analytics - INFO - Processed 0 time periods
+2025-03-12 12:39:06,074 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 2, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='string'
+2025-03-12 12:39:06,074 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-02-12 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:39:06,074 - app.db.repositories.data_repository - INFO - Querying violations from 2025-02-12 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:39:06,821 - app.db.repositories.data_repository - INFO - Found 153 trend records
+2025-03-12 12:39:06,821 - app.services.predictive_analytics - INFO - Processed 10 time periods
+2025-03-12 12:39:22,673 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='string'
+2025-03-12 12:39:22,674 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:39:22,674 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:39:22,932 - app.db.repositories.data_repository - INFO - Found 84 trend records
+2025-03-12 12:39:22,933 - app.services.predictive_analytics - INFO - Processed 6 time periods
+2025-03-12 12:42:22,697 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:42:22,697 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:42:30,599 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='string'
+2025-03-12 12:42:30,600 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:42:30,600 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:42:31,884 - app.db.repositories.data_repository - INFO - Found 777 trend records
+2025-03-12 12:42:31,885 - app.services.predictive_analytics - INFO - Processed 398 time period-driver combinations
+2025-03-12 12:45:47,261 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:45:47,261 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:45:53,642 - matplotlib.font_manager - INFO - generated new fontManager
+2025-03-12 12:46:05,209 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:46:05,209 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:46:21,405 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='string'
+2025-03-12 12:46:21,406 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver string
+2025-03-12 12:46:21,406 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver string
+2025-03-12 12:46:21,663 - app.db.repositories.data_repository - INFO - Found 0 trend records
+2025-03-12 12:46:21,663 - app.services.predictive_analytics - INFO - Processed 0 time period-driver combinations
+2025-03-12 12:46:41,392 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='string'
+2025-03-12 12:46:41,392 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver string
+2025-03-12 12:46:41,392 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver string
+2025-03-12 12:46:41,676 - app.db.repositories.data_repository - INFO - Found 0 trend records
+2025-03-12 12:46:41,677 - app.services.predictive_analytics - INFO - Processed 0 time period-driver combinations
+2025-03-12 12:47:05,459 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 12:47:05,459 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 12:47:05,460 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 12:47:05,714 - app.db.repositories.data_repository - INFO - Found 6 trend records
+2025-03-12 12:47:05,715 - app.services.predictive_analytics - INFO - Processed 3 time period-driver combinations
+2025-03-12 12:47:19,476 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 12:47:19,476 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 12:47:19,476 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 12:47:19,733 - app.db.repositories.data_repository - INFO - Found 6 trend records
+2025-03-12 12:47:19,733 - app.services.predictive_analytics - INFO - Processed 3 time period-driver combinations
+2025-03-12 12:51:22,937 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:51:22,937 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:51:26,952 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:51:26,952 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:51:32,452 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 12:51:32,452 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 12:51:32,452 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 12:51:32,707 - app.db.repositories.data_repository - INFO - Found 6 trend records
+2025-03-12 12:51:32,707 - app.services.predictive_analytics - INFO - Processed 3 time period-driver combinations
+2025-03-12 12:51:32,708 - app.api.endpoints.reports - ERROR - Error generating PDF report: TTF Font file not found: Roboto-Regular.ttf
+Traceback (most recent call last):
+  File "E:\Office\Opal\deep reports\app\api\endpoints\reports.py", line 58, in get_violation_trends
+    pdf_path = generate_driver_report(trends)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 73, in generate_driver_report
+    pdf = ModernReportPDF()
+          ^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 13, in __init__
+    self.add_font('Roboto', '', 'Roboto-Regular.ttf', uni=True)
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\fpdf\fpdf.py", line 2028, in add_font
+    raise FileNotFoundError(f"TTF Font file not found: {fname}")
+FileNotFoundError: TTF Font file not found: Roboto-Regular.ttf
+2025-03-12 12:51:44,276 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 38, 30, 332000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid=None
+2025-03-12 12:51:44,277 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:51:44,277 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:38:30.332000+00:00 to 2025-03-12 07:38:30.332000+00:00
+2025-03-12 12:51:45,528 - app.db.repositories.data_repository - INFO - Found 777 trend records
+2025-03-12 12:51:45,534 - app.services.predictive_analytics - INFO - Processed 398 time period-driver combinations
+2025-03-12 12:51:45,536 - app.api.endpoints.reports - ERROR - Error generating PDF report: TTF Font file not found: Roboto-Regular.ttf
+Traceback (most recent call last):
+  File "E:\Office\Opal\deep reports\app\api\endpoints\reports.py", line 58, in get_violation_trends
+    pdf_path = generate_driver_report(trends)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 73, in generate_driver_report
+    pdf = ModernReportPDF()
+          ^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 13, in __init__
+    self.add_font('Roboto', '', 'Roboto-Regular.ttf', uni=True)
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\fpdf\fpdf.py", line 2028, in add_font
+    raise FileNotFoundError(f"TTF Font file not found: {fname}")
+FileNotFoundError: TTF Font file not found: Roboto-Regular.ttf
+2025-03-12 12:55:00,440 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:55:00,440 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:55:04,809 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:55:04,810 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:55:49,008 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 7, 7, 55, 16, 949000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 55, 16, 949000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid=''
+2025-03-12 12:55:49,009 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-07 07:55:16.949000+00:00 to 2025-03-12 07:55:16.949000+00:00
+2025-03-12 12:55:49,009 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-07 07:55:16.949000+00:00 to 2025-03-12 07:55:16.949000+00:00
+2025-03-12 12:55:50,233 - app.db.repositories.data_repository - INFO - Found 774 trend records
+2025-03-12 12:55:50,234 - app.services.predictive_analytics - INFO - Processed 398 time period-driver combinations
+2025-03-12 12:55:50,373 - app.api.endpoints.reports - ERROR - Error generating PDF report: 'seaborn' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+Traceback (most recent call last):
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\style\core.py", line 137, in use
+    style = _rc_params_in_file(style)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\__init__.py", line 870, in _rc_params_in_file
+    with _open_file_or_url(fname) as fd:
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\__init__.py", line 847, in _open_file_or_url
+    with open(fname, encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'seaborn'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Office\Opal\deep reports\app\api\endpoints\reports.py", line 58, in get_violation_trends
+    pdf_path = generate_driver_report(trends)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 122, in generate_driver_report
+    chart_image = create_modern_chart(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 50, in create_modern_chart
+    plt.style.use('seaborn')
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\style\core.py", line 139, in use
+    raise OSError(
+OSError: 'seaborn' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+2025-03-12 12:57:27,072 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:57:27,072 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:57:31,363 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 12:57:31,363 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 12:57:58,029 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 10, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid=''
+2025-03-12 12:57:58,029 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-10 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00
+2025-03-12 12:57:58,030 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-10 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00
+2025-03-12 12:57:59,009 - app.db.repositories.data_repository - INFO - Found 335 trend records
+2025-03-12 12:57:59,010 - app.services.predictive_analytics - INFO - Processed 176 time period-driver combinations
+2025-03-12 12:59:12,283 - fontTools.subset - INFO - maxp pruned
+2025-03-12 12:59:12,283 - fontTools.subset - INFO - cmap pruned
+2025-03-12 12:59:12,291 - fontTools.subset - INFO - post pruned
+2025-03-12 12:59:12,296 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 12:59:12,296 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 12:59:12,296 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 12:59:12,298 - fontTools.subset - INFO - glyf pruned
+2025-03-12 12:59:12,298 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 12:59:12,298 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 12:59:12,298 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 12:59:12,298 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 12:59:12,299 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 12:59:12,299 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 12:59:12,299 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 12:59:12,299 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 12:59:12,300 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 12:59:12,300 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 12:59:12,301 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 12:59:12,301 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 12:59:12,301 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 12:59:12,301 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 12:59:12,302 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 12:59:12,302 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 12:59:12,302 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 12:59:12,302 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 12:59:12,302 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 12:59:12,302 - fontTools.subset - INFO - post subsetted
+2025-03-12 12:59:12,303 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 12:59:12,303 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 12:59:12,303 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 12:59:12,303 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 12:59:12,304 - fontTools.subset - INFO - head pruned
+2025-03-12 12:59:12,304 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 12:59:12,304 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 12:59:12,305 - fontTools.subset - INFO - glyf pruned
+2025-03-12 12:59:12,306 - fontTools.subset - INFO - name pruned
+2025-03-12 12:59:12,319 - fontTools.subset - INFO - maxp pruned
+2025-03-12 12:59:12,319 - fontTools.subset - INFO - cmap pruned
+2025-03-12 12:59:12,320 - fontTools.subset - INFO - post pruned
+2025-03-12 12:59:12,320 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 12:59:12,320 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 12:59:12,320 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 12:59:12,322 - fontTools.subset - INFO - glyf pruned
+2025-03-12 12:59:12,323 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 12:59:12,323 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 12:59:12,323 - fontTools.subset - INFO - Closing glyph list over 'glyf': 63 glyphs before
+2025-03-12 12:59:12,323 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'R', 'S', 'T', 'U', 'V', 'W', 'Z', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'j', 'k', 'l', 'm', 'n', 'nine', 'numbersign', 'o', 'one', 'p', 'q', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'w', 'x', 'y', 'zero']
+2025-03-12 12:59:12,323 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 7, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 46, 47, 48, 49, 50, 54, 55, 56, 57, 58, 59, 62, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 95, 97]
+2025-03-12 12:59:12,324 - fontTools.subset - INFO - Closed glyph list over 'glyf': 64 glyphs after
+2025-03-12 12:59:12,324 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'R', 'S', 'T', 'U', 'V', 'W', 'Z', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'j', 'k', 'l', 'm', 'n', 'nine', 'numbersign', 'o', 'one', 'p', 'period', 'q', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'w', 'x', 'y', 'zero']
+2025-03-12 12:59:12,324 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 7, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 46, 47, 48, 49, 50, 54, 55, 56, 57, 58, 59, 62, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 95, 97]
+2025-03-12 12:59:12,325 - fontTools.subset - INFO - Retaining 64 glyphs
+2025-03-12 12:59:12,325 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 12:59:12,325 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 12:59:12,325 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 12:59:12,325 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 12:59:12,326 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 12:59:12,326 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 12:59:12,326 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 12:59:12,326 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 12:59:12,326 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 12:59:12,326 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 12:59:12,327 - fontTools.subset - INFO - post subsetted
+2025-03-12 12:59:12,327 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 12:59:12,327 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 12:59:12,327 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 12:59:12,328 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 12:59:12,329 - fontTools.subset - INFO - head pruned
+2025-03-12 12:59:12,330 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 12:59:12,331 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 12:59:12,331 - fontTools.subset - INFO - glyf pruned
+2025-03-12 12:59:12,333 - fontTools.subset - INFO - name pruned
+2025-03-12 13:01:28,453 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 10, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:01:28,453 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-10 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:01:28,453 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-10 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:01:28,703 - app.db.repositories.data_repository - INFO - Found 2 trend records
+2025-03-12 13:01:28,703 - app.services.predictive_analytics - INFO - Processed 1 time period-driver combinations
+2025-03-12 13:01:30,396 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:01:30,397 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:01:30,397 - fontTools.subset - INFO - post pruned
+2025-03-12 13:01:30,398 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:01:30,398 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:01:30,398 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:01:30,403 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:01:30,405 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:01:30,405 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:01:30,405 - fontTools.subset - INFO - Closing glyph list over 'glyf': 54 glyphs before
+2025-03-12 13:01:30,405 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:01:30,406 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:01:30,406 - fontTools.subset - INFO - Closed glyph list over 'glyf': 54 glyphs after
+2025-03-12 13:01:30,406 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:01:30,407 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:01:30,407 - fontTools.subset - INFO - Retaining 54 glyphs
+2025-03-12 13:01:30,407 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:01:30,408 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:01:30,408 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:01:30,408 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:01:30,408 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:01:30,408 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:01:30,409 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:01:30,409 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:01:30,409 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:01:30,410 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:01:30,410 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:01:30,410 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:01:30,410 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:01:30,410 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:01:30,411 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:01:30,411 - fontTools.subset - INFO - head pruned
+2025-03-12 13:01:30,412 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:01:30,412 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:01:30,413 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:01:30,413 - fontTools.subset - INFO - name pruned
+2025-03-12 13:01:30,425 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:01:30,426 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:01:30,426 - fontTools.subset - INFO - post pruned
+2025-03-12 13:01:30,426 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:01:30,427 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:01:30,427 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:01:30,428 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:01:30,428 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:01:30,429 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:01:30,429 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:01:30,429 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'N', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:01:30,429 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 50, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:01:30,430 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:01:30,430 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'N', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:01:30,430 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 50, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:01:30,430 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:01:30,431 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:01:30,431 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:01:30,431 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:01:30,431 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:01:30,432 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:01:30,432 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:01:30,432 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:01:30,432 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:01:30,432 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:01:30,433 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:01:30,433 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:01:30,433 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:01:30,433 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:01:30,433 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:01:30,435 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:01:30,435 - fontTools.subset - INFO - head pruned
+2025-03-12 13:01:30,435 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:01:30,436 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:01:30,436 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:01:30,437 - fontTools.subset - INFO - name pruned
+2025-03-12 13:03:13,067 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 10, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:03:13,067 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-10 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:03:13,068 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-10 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:03:13,317 - app.db.repositories.data_repository - INFO - Found 2 trend records
+2025-03-12 13:03:13,318 - app.services.predictive_analytics - INFO - Processed 1 time period-driver combinations
+2025-03-12 13:04:19,260 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:04:19,262 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:04:19,262 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:04:19,512 - app.db.repositories.data_repository - INFO - Found 12 trend records
+2025-03-12 13:04:19,512 - app.services.predictive_analytics - INFO - Processed 6 time period-driver combinations
+2025-03-12 13:05:09,131 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:05:09,131 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:05:13,466 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:05:13,466 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:05:18,908 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:05:18,909 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:05:18,909 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:05:19,160 - app.db.repositories.data_repository - INFO - Found 12 trend records
+2025-03-12 13:05:19,160 - app.services.predictive_analytics - INFO - Processed 6 time period-driver combinations
+2025-03-12 13:05:21,295 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:05:21,296 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:05:21,298 - fontTools.subset - INFO - post pruned
+2025-03-12 13:05:21,300 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:05:21,300 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:05:21,300 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:05:21,303 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:05:21,303 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:05:21,303 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:05:21,303 - fontTools.subset - INFO - Closing glyph list over 'glyf': 54 glyphs before
+2025-03-12 13:05:21,305 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:05:21,305 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:05:21,305 - fontTools.subset - INFO - Closed glyph list over 'glyf': 54 glyphs after
+2025-03-12 13:05:21,305 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:05:21,306 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:05:21,306 - fontTools.subset - INFO - Retaining 54 glyphs
+2025-03-12 13:05:21,306 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:05:21,307 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:05:21,307 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:05:21,307 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:05:21,307 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:05:21,308 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:05:21,308 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:05:21,308 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:05:21,308 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:05:21,308 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:05:21,308 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:05:21,309 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:05:21,309 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:05:21,309 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:05:21,309 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:05:21,310 - fontTools.subset - INFO - head pruned
+2025-03-12 13:05:21,310 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:05:21,310 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:05:21,310 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:05:21,312 - fontTools.subset - INFO - name pruned
+2025-03-12 13:05:21,325 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:05:21,326 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:05:21,326 - fontTools.subset - INFO - post pruned
+2025-03-12 13:05:21,326 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:05:21,327 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:05:21,327 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:05:21,332 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:05:21,333 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:05:21,333 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:05:21,333 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:05:21,333 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'N', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:05:21,334 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 50, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:05:21,334 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:05:21,334 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'N', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:05:21,335 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 50, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:05:21,335 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:05:21,336 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:05:21,336 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:05:21,336 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:05:21,336 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:05:21,337 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:05:21,337 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:05:21,337 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:05:21,338 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:05:21,338 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:05:21,338 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:05:21,338 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:05:21,338 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:05:21,338 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:05:21,339 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:05:21,339 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:05:21,339 - fontTools.subset - INFO - head pruned
+2025-03-12 13:05:21,340 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:05:21,340 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:05:21,340 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:05:21,342 - fontTools.subset - INFO - name pruned
+2025-03-12 13:09:08,696 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:09:08,697 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:09:13,068 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:09:13,068 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:09:17,213 - app.utils.assets.logo_manager - WARNING - Company logo not found at E:\Office\Opal\deep reports\app\utils\assets\opal_logo.png
+2025-03-12 13:09:17,213 - app.utils.assets.logo_manager - INFO - Please place your company logo at this location
+2025-03-12 13:09:17,289 - app.utils.assets.logo_manager - INFO - Created placeholder logo at E:\Office\Opal\deep reports\app\utils\assets\opal_logo.png
+2025-03-12 13:10:35,761 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:10:35,762 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:10:35,763 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:10:36,016 - app.db.repositories.data_repository - INFO - Found 12 trend records
+2025-03-12 13:10:36,016 - app.services.predictive_analytics - INFO - Processed 6 time period-driver combinations
+2025-03-12 13:10:38,184 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:10:38,185 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:10:38,188 - fontTools.subset - INFO - post pruned
+2025-03-12 13:10:38,189 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:10:38,189 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:10:38,189 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:10:38,191 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:10:38,191 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:10:38,192 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:10:38,192 - fontTools.subset - INFO - Closing glyph list over 'glyf': 54 glyphs before
+2025-03-12 13:10:38,192 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:10:38,193 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:10:38,193 - fontTools.subset - INFO - Closed glyph list over 'glyf': 54 glyphs after
+2025-03-12 13:10:38,193 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:10:38,194 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:10:38,194 - fontTools.subset - INFO - Retaining 54 glyphs
+2025-03-12 13:10:38,195 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:10:38,195 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:10:38,195 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:10:38,195 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:10:38,196 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:10:38,196 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:10:38,196 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:10:38,197 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:10:38,197 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:10:38,197 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:10:38,197 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:10:38,197 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:10:38,197 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:10:38,198 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:10:38,198 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:10:38,199 - fontTools.subset - INFO - head pruned
+2025-03-12 13:10:38,199 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:10:38,199 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:10:38,201 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:10:38,203 - fontTools.subset - INFO - name pruned
+2025-03-12 13:10:38,219 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:10:38,220 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:10:38,220 - fontTools.subset - INFO - post pruned
+2025-03-12 13:10:38,221 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:10:38,222 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:10:38,222 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:10:38,224 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:10:38,225 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:10:38,225 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:10:38,225 - fontTools.subset - INFO - Closing glyph list over 'glyf': 53 glyphs before
+2025-03-12 13:10:38,226 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'L', 'N', 'O', 'P', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:10:38,226 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 48, 50, 51, 52, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:10:38,226 - fontTools.subset - INFO - Closed glyph list over 'glyf': 54 glyphs after
+2025-03-12 13:10:38,227 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'L', 'N', 'O', 'P', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:10:38,227 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 48, 50, 51, 52, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:10:38,228 - fontTools.subset - INFO - Retaining 54 glyphs
+2025-03-12 13:10:38,228 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:10:38,229 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:10:38,229 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:10:38,229 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:10:38,229 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:10:38,230 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:10:38,230 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:10:38,230 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:10:38,230 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:10:38,231 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:10:38,231 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:10:38,231 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:10:38,231 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:10:38,232 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:10:38,232 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:10:38,233 - fontTools.subset - INFO - head pruned
+2025-03-12 13:10:38,233 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:10:38,233 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:10:38,234 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:10:38,236 - fontTools.subset - INFO - name pruned
+2025-03-12 13:14:20,187 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:14:20,187 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:14:23,957 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:14:23,957 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:14:31,923 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:14:31,925 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:14:31,925 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:14:32,198 - app.db.repositories.data_repository - INFO - Found 12 trend records
+2025-03-12 13:14:32,198 - app.services.predictive_analytics - INFO - Processed 6 time period-driver combinations
+2025-03-12 13:14:32,374 - app.api.endpoints.reports - ERROR - Error generating PDF report: 'seaborn-whitegrid' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+Traceback (most recent call last):
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\style\core.py", line 137, in use
+    style = _rc_params_in_file(style)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\__init__.py", line 870, in _rc_params_in_file
+    with _open_file_or_url(fname) as fd:
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\__init__.py", line 847, in _open_file_or_url
+    with open(fname, encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'seaborn-whitegrid'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Office\Opal\deep reports\app\api\endpoints\reports.py", line 58, in get_violation_trends
+    pdf_path = generate_driver_report(trends)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 203, in generate_driver_report
+    chart_image = create_modern_chart(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 91, in create_modern_chart
+    plt.style.use('seaborn-whitegrid')
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\style\core.py", line 139, in use
+    raise OSError(
+OSError: 'seaborn-whitegrid' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+2025-03-12 13:14:38,321 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:14:38,321 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:14:38,322 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:14:38,578 - app.db.repositories.data_repository - INFO - Found 12 trend records
+2025-03-12 13:14:38,579 - app.services.predictive_analytics - INFO - Processed 6 time period-driver combinations
+2025-03-12 13:14:38,597 - app.api.endpoints.reports - ERROR - Error generating PDF report: 'seaborn-whitegrid' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+Traceback (most recent call last):
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\style\core.py", line 137, in use
+    style = _rc_params_in_file(style)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\__init__.py", line 870, in _rc_params_in_file
+    with _open_file_or_url(fname) as fd:
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\__init__.py", line 847, in _open_file_or_url
+    with open(fname, encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'seaborn-whitegrid'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Office\Opal\deep reports\app\api\endpoints\reports.py", line 58, in get_violation_trends
+    pdf_path = generate_driver_report(trends)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 203, in generate_driver_report
+    chart_image = create_modern_chart(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "E:\Office\Opal\deep reports\app\utils\report_generator.py", line 91, in create_modern_chart
+    plt.style.use('seaborn-whitegrid')
+  File "C:\Users\msameerakram\AppData\Local\anaconda3\Lib\site-packages\matplotlib\style\core.py", line 139, in use
+    raise OSError(
+OSError: 'seaborn-whitegrid' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+2025-03-12 13:16:18,025 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:16:18,025 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:16:22,413 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:16:22,413 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:16:27,979 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='59158a1a-f5b1-4242-b9f0-ee99ca9fba12'
+2025-03-12 13:16:27,979 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:16:27,979 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver 59158a1a-f5b1-4242-b9f0-ee99ca9fba12
+2025-03-12 13:16:28,255 - app.db.repositories.data_repository - INFO - Found 12 trend records
+2025-03-12 13:16:28,255 - app.services.predictive_analytics - INFO - Processed 6 time period-driver combinations
+2025-03-12 13:16:30,320 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:16:30,320 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:16:30,324 - fontTools.subset - INFO - post pruned
+2025-03-12 13:16:30,326 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:16:30,327 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:16:30,327 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:16:30,329 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:16:30,329 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:16:30,329 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:16:30,330 - fontTools.subset - INFO - Closing glyph list over 'glyf': 54 glyphs before
+2025-03-12 13:16:30,330 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:16:30,333 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:16:30,333 - fontTools.subset - INFO - Closed glyph list over 'glyf': 54 glyphs after
+2025-03-12 13:16:30,333 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'M', 'N', 'P', 'S', 'T', 'U', 'V', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:16:30,334 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 49, 50, 52, 55, 56, 57, 58, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:16:30,334 - fontTools.subset - INFO - Retaining 54 glyphs
+2025-03-12 13:16:30,334 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:16:30,335 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:16:30,335 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:16:30,335 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:16:30,335 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:16:30,336 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:16:30,338 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:16:30,339 - fontTools.subset - INFO - head pruned
+2025-03-12 13:16:30,339 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:16:30,340 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:16:30,340 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:16:30,342 - fontTools.subset - INFO - name pruned
+2025-03-12 13:16:30,356 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:16:30,356 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:16:30,356 - fontTools.subset - INFO - post pruned
+2025-03-12 13:16:30,356 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:16:30,356 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:16:30,358 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:16:30,360 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:16:30,360 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:16:30,361 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:16:30,361 - fontTools.subset - INFO - Closing glyph list over 'glyf': 53 glyphs before
+2025-03-12 13:16:30,361 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'L', 'N', 'O', 'P', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:16:30,361 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 48, 50, 51, 52, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:16:30,362 - fontTools.subset - INFO - Closed glyph list over 'glyf': 54 glyphs after
+2025-03-12 13:16:30,362 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'G', 'H', 'I', 'K', 'L', 'N', 'O', 'P', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:16:30,362 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 43, 44, 45, 47, 48, 50, 51, 52, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:16:30,363 - fontTools.subset - INFO - Retaining 54 glyphs
+2025-03-12 13:16:30,363 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:16:30,363 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:16:30,363 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:16:30,363 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:16:30,364 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:16:30,364 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:16:30,364 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:16:30,364 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:16:30,365 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:16:30,365 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:16:30,365 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:16:30,365 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:16:30,365 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:16:30,366 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:16:30,366 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:16:30,367 - fontTools.subset - INFO - head pruned
+2025-03-12 13:16:30,367 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:16:30,367 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:16:30,369 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:16:30,371 - fontTools.subset - INFO - name pruned
+2025-03-12 13:17:53,122 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:17:53,123 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:17:53,123 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:17:53,383 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:17:53,384 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:17:55,106 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:17:55,106 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:17:55,106 - fontTools.subset - INFO - post pruned
+2025-03-12 13:17:55,106 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:17:55,108 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:17:55,108 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:17:55,109 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:17:55,110 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:17:55,110 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:17:55,111 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 13:17:55,111 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:17:55,111 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:17:55,111 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 13:17:55,111 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:17:55,111 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:17:55,113 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 13:17:55,113 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:17:55,113 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:17:55,114 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:17:55,114 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:17:55,114 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:17:55,114 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:17:55,114 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:17:55,115 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:17:55,115 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:17:55,115 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:17:55,115 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:17:55,115 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:17:55,115 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:17:55,115 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:17:55,116 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:17:55,117 - fontTools.subset - INFO - head pruned
+2025-03-12 13:17:55,117 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:17:55,117 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:17:55,118 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:17:55,119 - fontTools.subset - INFO - name pruned
+2025-03-12 13:17:55,134 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:17:55,134 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:17:55,134 - fontTools.subset - INFO - post pruned
+2025-03-12 13:17:55,134 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:17:55,134 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:17:55,135 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:17:55,136 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:17:55,136 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:17:55,136 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:17:55,138 - fontTools.subset - INFO - Closing glyph list over 'glyf': 51 glyphs before
+2025-03-12 13:17:55,138 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'L', 'M', 'O', 'P', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:17:55,139 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 48, 49, 51, 52, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:17:55,139 - fontTools.subset - INFO - Closed glyph list over 'glyf': 52 glyphs after
+2025-03-12 13:17:55,139 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'L', 'M', 'O', 'P', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:17:55,140 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 48, 49, 51, 52, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:17:55,140 - fontTools.subset - INFO - Retaining 52 glyphs
+2025-03-12 13:17:55,141 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:17:55,141 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:17:55,142 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:17:55,142 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:17:55,142 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:17:55,143 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:17:55,143 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:17:55,144 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:17:55,144 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:17:55,144 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:17:55,145 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:17:55,145 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:17:55,145 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:17:55,146 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:17:55,146 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:17:55,147 - fontTools.subset - INFO - head pruned
+2025-03-12 13:17:55,147 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:17:55,149 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:17:55,150 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:17:55,152 - fontTools.subset - INFO - name pruned
+2025-03-12 13:25:12,236 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:25:12,236 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:25:17,771 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:25:17,771 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:25:25,951 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:25:25,952 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:25:25,952 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:25:26,316 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:25:26,317 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:25:28,802 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:25:28,802 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:25:28,808 - fontTools.subset - INFO - post pruned
+2025-03-12 13:25:28,811 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:25:28,811 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:25:28,811 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:25:28,818 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:25:28,819 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:25:28,819 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:25:28,819 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 13:25:28,820 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:25:28,821 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:25:28,821 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 13:25:28,822 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:25:28,822 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:25:28,823 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 13:25:28,823 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:25:28,823 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:25:28,823 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:25:28,824 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:25:28,824 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:25:28,824 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:25:28,824 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:25:28,825 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:25:28,825 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:25:28,825 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:25:28,826 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:25:28,826 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:25:28,826 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:25:28,826 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:25:28,827 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:25:28,828 - fontTools.subset - INFO - head pruned
+2025-03-12 13:25:28,829 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:25:28,829 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:25:28,830 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:25:28,832 - fontTools.subset - INFO - name pruned
+2025-03-12 13:25:28,851 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:25:28,851 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:25:28,851 - fontTools.subset - INFO - post pruned
+2025-03-12 13:25:28,851 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:25:28,853 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:25:28,853 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:25:28,856 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:25:28,856 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:25:28,857 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:25:28,857 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:25:28,857 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:25:28,857 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:25:28,858 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:25:28,858 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:25:28,858 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:25:28,859 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:25:28,859 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:25:28,859 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:25:28,860 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:25:28,860 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:25:28,860 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:25:28,861 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:25:28,861 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:25:28,861 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:25:28,861 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:25:28,861 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:25:28,861 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:25:28,863 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:25:28,863 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:25:28,863 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:25:28,864 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:25:28,864 - fontTools.subset - INFO - head pruned
+2025-03-12 13:25:28,865 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:25:28,865 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:25:28,866 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:25:28,868 - fontTools.subset - INFO - name pruned
+2025-03-12 13:26:35,112 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:26:35,112 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:26:39,973 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:26:39,973 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:26:52,169 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:26:52,170 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:26:52,170 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:26:52,432 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:26:52,432 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:26:54,901 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:26:54,901 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:26:54,905 - fontTools.subset - INFO - post pruned
+2025-03-12 13:26:54,908 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:26:54,908 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:26:54,908 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:26:54,914 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:26:54,915 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:26:54,915 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:26:54,915 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 13:26:54,915 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:26:54,916 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:26:54,916 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 13:26:54,916 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:26:54,917 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:26:54,917 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 13:26:54,917 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:26:54,918 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:26:54,918 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:26:54,918 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:26:54,919 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:26:54,919 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:26:54,920 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:26:54,920 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:26:54,920 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:26:54,920 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:26:54,921 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:26:54,921 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:26:54,921 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:26:54,921 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:26:54,922 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:26:54,923 - fontTools.subset - INFO - head pruned
+2025-03-12 13:26:54,924 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:26:54,924 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:26:54,925 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:26:54,927 - fontTools.subset - INFO - name pruned
+2025-03-12 13:26:54,948 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:26:54,949 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:26:54,949 - fontTools.subset - INFO - post pruned
+2025-03-12 13:26:54,949 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:26:54,950 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:26:54,950 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:26:54,953 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:26:54,954 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:26:54,955 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:26:54,955 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:26:54,955 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:26:54,956 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:26:54,956 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:26:54,957 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:26:54,957 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:26:54,957 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:26:54,958 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:26:54,959 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:26:54,959 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:26:54,959 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:26:54,960 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:26:54,960 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:26:54,961 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:26:54,961 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:26:54,961 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:26:54,961 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:26:54,961 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:26:54,963 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:26:54,963 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:26:54,963 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:26:54,964 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:26:54,964 - fontTools.subset - INFO - head pruned
+2025-03-12 13:26:54,965 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:26:54,965 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:26:54,966 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:26:54,967 - fontTools.subset - INFO - name pruned
+2025-03-12 13:30:46,849 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:30:46,849 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:30:51,689 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:30:51,690 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:30:59,523 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:30:59,525 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:30:59,525 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:30:59,798 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:30:59,798 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:31:02,507 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:31:02,508 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:31:02,512 - fontTools.subset - INFO - post pruned
+2025-03-12 13:31:02,513 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:31:02,513 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:31:02,515 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:31:02,521 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:31:02,522 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:31:02,522 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:31:02,523 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 13:31:02,523 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:31:02,524 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:31:02,525 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 13:31:02,525 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:31:02,525 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:31:02,525 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 13:31:02,526 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:31:02,526 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:31:02,526 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:31:02,527 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:31:02,527 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:31:02,528 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:31:02,528 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:31:02,528 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:31:02,529 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:31:02,530 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:31:02,530 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:31:02,532 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:31:02,532 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:31:02,532 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:31:02,533 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:31:02,534 - fontTools.subset - INFO - head pruned
+2025-03-12 13:31:02,535 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:31:02,535 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:31:02,536 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:31:02,539 - fontTools.subset - INFO - name pruned
+2025-03-12 13:31:02,559 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:31:02,560 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:31:02,560 - fontTools.subset - INFO - post pruned
+2025-03-12 13:31:02,561 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:31:02,561 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:31:02,561 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:31:02,565 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:31:02,566 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:31:02,566 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:31:02,566 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:31:02,567 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:31:02,567 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:31:02,568 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:31:02,568 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:31:02,568 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:31:02,569 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:31:02,570 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:31:02,570 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:31:02,570 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:31:02,572 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:31:02,572 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:31:02,573 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:31:02,573 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:31:02,574 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:31:02,574 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:31:02,575 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:31:02,575 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:31:02,575 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:31:02,576 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:31:02,576 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:31:02,577 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:31:02,578 - fontTools.subset - INFO - head pruned
+2025-03-12 13:31:02,578 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:31:02,579 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:31:02,580 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:31:02,581 - fontTools.subset - INFO - name pruned
+2025-03-12 13:32:02,950 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:32:02,950 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:32:02,950 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:32:03,249 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:32:03,250 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:32:24,799 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:32:24,800 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:32:29,135 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:32:29,136 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:32:37,812 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:32:37,813 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:32:37,813 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:32:38,124 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:32:38,124 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:32:40,770 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:32:40,771 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:32:40,776 - fontTools.subset - INFO - post pruned
+2025-03-12 13:32:40,778 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:32:40,778 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:32:40,778 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:32:40,783 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:32:40,784 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:32:40,784 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:32:40,784 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 13:32:40,785 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:32:40,785 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:32:40,786 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 13:32:40,786 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:32:40,786 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:32:40,787 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 13:32:40,787 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:32:40,788 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:32:40,788 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:32:40,788 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:32:40,788 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:32:40,789 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:32:40,789 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:32:40,789 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:32:40,790 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:32:40,790 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:32:40,790 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:32:40,790 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:32:40,790 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:32:40,790 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:32:40,791 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:32:40,792 - fontTools.subset - INFO - head pruned
+2025-03-12 13:32:40,792 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:32:40,792 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:32:40,793 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:32:40,795 - fontTools.subset - INFO - name pruned
+2025-03-12 13:32:40,813 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:32:40,815 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:32:40,815 - fontTools.subset - INFO - post pruned
+2025-03-12 13:32:40,815 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:32:40,816 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:32:40,816 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:32:40,819 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:32:40,819 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:32:40,819 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:32:40,820 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:32:40,820 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:32:40,820 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:32:40,821 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:32:40,821 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:32:40,821 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:32:40,822 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:32:40,822 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:32:40,822 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:32:40,823 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:32:40,823 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:32:40,823 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:32:40,823 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:32:40,825 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:32:40,825 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:32:40,825 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:32:40,825 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:32:40,826 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:32:40,826 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:32:40,826 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:32:40,826 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:32:40,827 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:32:40,828 - fontTools.subset - INFO - head pruned
+2025-03-12 13:32:40,830 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:32:40,830 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:32:40,832 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:32:40,835 - fontTools.subset - INFO - name pruned
+2025-03-12 13:33:31,360 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:33:31,360 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:33:35,745 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:33:35,745 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:33:43,099 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:33:43,099 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:33:43,100 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:33:43,390 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:33:43,390 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:33:45,979 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:33:45,979 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:33:45,983 - fontTools.subset - INFO - post pruned
+2025-03-12 13:33:45,985 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:33:45,986 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:33:45,986 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:33:45,992 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:33:45,992 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:33:45,993 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:33:45,993 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 13:33:45,993 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:33:45,993 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:33:45,994 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 13:33:45,994 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:33:45,994 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:33:45,995 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 13:33:45,996 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:33:45,996 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:33:45,996 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:33:45,997 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:33:45,997 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:33:45,998 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:33:45,999 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:33:45,999 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:33:45,999 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:33:46,000 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:33:46,000 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:33:46,000 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:33:46,000 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:33:46,000 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:33:46,001 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:33:46,001 - fontTools.subset - INFO - head pruned
+2025-03-12 13:33:46,002 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:33:46,003 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:33:46,005 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:33:46,006 - fontTools.subset - INFO - name pruned
+2025-03-12 13:33:46,029 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:33:46,030 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:33:46,030 - fontTools.subset - INFO - post pruned
+2025-03-12 13:33:46,031 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:33:46,032 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:33:46,032 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:33:46,034 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:33:46,035 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:33:46,035 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:33:46,035 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:33:46,035 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:33:46,036 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:33:46,036 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:33:46,036 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:33:46,037 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:33:46,037 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:33:46,038 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:33:46,038 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:33:46,038 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:33:46,039 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:33:46,039 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:33:46,039 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:33:46,040 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:33:46,040 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:33:46,040 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:33:46,040 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:33:46,040 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:33:46,040 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:33:46,041 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:33:46,041 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:33:46,042 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:33:46,042 - fontTools.subset - INFO - head pruned
+2025-03-12 13:33:46,042 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:33:46,044 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:33:46,045 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:33:46,046 - fontTools.subset - INFO - name pruned
+2025-03-12 13:34:56,653 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:34:56,654 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:35:01,584 - numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-03-12 13:35:01,585 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-12 13:35:08,180 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:35:08,181 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:35:08,182 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:35:08,489 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:35:08,490 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:35:10,881 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:35:10,881 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:35:10,884 - fontTools.subset - INFO - post pruned
+2025-03-12 13:35:10,886 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:35:10,886 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:35:10,887 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:35:10,892 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:35:10,894 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:35:10,894 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:35:10,894 - fontTools.subset - INFO - Closing glyph list over 'glyf': 57 glyphs before
+2025-03-12 13:35:10,894 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:35:10,895 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:35:10,895 - fontTools.subset - INFO - Closed glyph list over 'glyf': 57 glyphs after
+2025-03-12 13:35:10,896 - fontTools.subset - INFO - Glyph names: ['.notdef', 'D', 'E', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'S', 'T', 'U', 'V', 'W', 'a', 'b', 'bar', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'h', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'underscore', 'uni0000', 'uni0002', 'uni000D', 'v', 'y', 'z', 'zero']
+2025-03-12 13:35:10,896 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 40, 41, 43, 44, 45, 48, 49, 50, 51, 52, 55, 56, 57, 58, 59, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81, 82, 83, 84, 86, 87, 88, 90, 93, 94, 95, 96, 97]
+2025-03-12 13:35:10,896 - fontTools.subset - INFO - Retaining 57 glyphs
+2025-03-12 13:35:10,897 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:35:10,897 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:35:10,897 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:35:10,897 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:35:10,898 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:35:10,898 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:35:10,898 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:35:10,899 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:35:10,899 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:35:10,899 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:35:10,899 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:35:10,900 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:35:10,900 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:35:10,900 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:35:10,901 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:35:10,901 - fontTools.subset - INFO - head pruned
+2025-03-12 13:35:10,901 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:35:10,902 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:35:10,903 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:35:10,904 - fontTools.subset - INFO - name pruned
+2025-03-12 13:35:10,919 - fontTools.subset - INFO - maxp pruned
+2025-03-12 13:35:10,919 - fontTools.subset - INFO - cmap pruned
+2025-03-12 13:35:10,920 - fontTools.subset - INFO - post pruned
+2025-03-12 13:35:10,920 - fontTools.subset - INFO - GDEF dropped
+2025-03-12 13:35:10,920 - fontTools.subset - INFO - GPOS dropped
+2025-03-12 13:35:10,920 - fontTools.subset - INFO - GSUB dropped
+2025-03-12 13:35:10,924 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:35:10,924 - fontTools.subset - INFO - Added gid0 to subset
+2025-03-12 13:35:10,925 - fontTools.subset - INFO - Added first four glyphs to subset
+2025-03-12 13:35:10,925 - fontTools.subset - INFO - Closing glyph list over 'glyf': 50 glyphs before
+2025-03-12 13:35:10,925 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:35:10,926 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:35:10,926 - fontTools.subset - INFO - Closed glyph list over 'glyf': 51 glyphs after
+2025-03-12 13:35:10,926 - fontTools.subset - INFO - Glyph names: ['.notdef', 'A', 'D', 'E', 'I', 'K', 'M', 'O', 'R', 'S', 'T', 'V', 'a', 'b', 'braceleft', 'braceright', 'c', 'colon', 'd', 'e', 'eight', 'f', 'five', 'four', 'g', 'hyphen', 'i', 'l', 'm', 'n', 'nine', 'o', 'one', 'p', 'period', 'r', 's', 'seven', 'six', 'space', 't', 'three', 'two', 'u', 'uni0000', 'uni0002', 'uni000D', 'v', 'x', 'y', 'zero']
+2025-03-12 13:35:10,927 - fontTools.subset - INFO - Glyph IDs:   [0, 1, 2, 3, 4, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 37, 40, 41, 45, 47, 49, 51, 54, 55, 56, 58, 69, 70, 71, 72, 73, 74, 75, 77, 80, 81, 82, 83, 84, 86, 87, 88, 89, 90, 92, 93, 95, 97]
+2025-03-12 13:35:10,927 - fontTools.subset - INFO - Retaining 51 glyphs
+2025-03-12 13:35:10,928 - fontTools.subset - INFO - head subsetting not needed
+2025-03-12 13:35:10,928 - fontTools.subset - INFO - hhea subsetting not needed
+2025-03-12 13:35:10,928 - fontTools.subset - INFO - maxp subsetting not needed
+2025-03-12 13:35:10,929 - fontTools.subset - INFO - OS/2 subsetting not needed
+2025-03-12 13:35:10,929 - fontTools.subset - INFO - hmtx subsetted
+2025-03-12 13:35:10,929 - fontTools.subset - INFO - cmap subsetted
+2025-03-12 13:35:10,930 - fontTools.subset - INFO - fpgm subsetting not needed
+2025-03-12 13:35:10,930 - fontTools.subset - INFO - prep subsetting not needed
+2025-03-12 13:35:10,930 - fontTools.subset - INFO - cvt  subsetting not needed
+2025-03-12 13:35:10,930 - fontTools.subset - INFO - loca subsetting not needed
+2025-03-12 13:35:10,930 - fontTools.subset - INFO - post subsetted
+2025-03-12 13:35:10,931 - fontTools.subset - INFO - gasp subsetting not needed
+2025-03-12 13:35:10,931 - fontTools.subset - INFO - STAT subsetting not needed
+2025-03-12 13:35:10,931 - fontTools.subset - INFO - name subsetting not needed
+2025-03-12 13:35:10,932 - fontTools.subset - INFO - glyf subsetted
+2025-03-12 13:35:10,933 - fontTools.subset - INFO - head pruned
+2025-03-12 13:35:10,933 - fontTools.subset - INFO - OS/2 Unicode ranges pruned: [0]
+2025-03-12 13:35:10,933 - fontTools.subset - INFO - OS/2 CodePage ranges pruned: [0]
+2025-03-12 13:35:10,934 - fontTools.subset - INFO - glyf pruned
+2025-03-12 13:35:10,935 - fontTools.subset - INFO - name pruned
+2025-03-12 13:35:33,648 - app.api.endpoints.reports - INFO - Processing violation trends request: start_date=datetime.datetime(2025, 3, 1, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) end_date=datetime.datetime(2025, 3, 12, 7, 57, 45, 701000, tzinfo=TzInfo(UTC)) group_by='day' days=30 driver_uuid='fb6b6c56-18fd-4602-aa8d-10d95f46f3d5'
+2025-03-12 13:35:33,649 - app.services.predictive_analytics - INFO - Analyzing violation trends from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:35:33,649 - app.db.repositories.data_repository - INFO - Querying violations from 2025-03-01 07:57:45.701000+00:00 to 2025-03-12 07:57:45.701000+00:00 for driver fb6b6c56-18fd-4602-aa8d-10d95f46f3d5
+2025-03-12 13:35:33,950 - app.db.repositories.data_repository - INFO - Found 21 trend records
+2025-03-12 13:35:33,951 - app.services.predictive_analytics - INFO - Processed 10 time period-driver combinations
+2025-03-12 13:35:49,737 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 90 days
+2025-03-12 13:35:49,737 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 90 days
+2025-03-12 13:35:50,685 - app.db.repositories.data_repository - INFO - Retrieved stats for 121 drivers
+2025-03-12 13:35:50,685 - app.services.predictive_analytics - INFO - Retrieved 121 driver records
+2025-03-12 13:35:50,686 - app.services.predictive_analytics - INFO - Successfully processed 121 drivers
+2025-03-12 13:36:07,533 - app.services.predictive_analytics - INFO - Starting driver risk prediction for last 2 days
+2025-03-12 13:36:07,533 - app.db.repositories.data_repository - INFO - Fetching driver risk data for past 2 days
+2025-03-12 13:36:08,082 - app.db.repositories.data_repository - INFO - Retrieved stats for 90 drivers
+2025-03-12 13:36:08,082 - app.services.predictive_analytics - INFO - Retrieved 90 driver records
+2025-03-12 13:36:08,083 - app.services.predictive_analytics - INFO - Successfully processed 90 drivers
