@@ -242,10 +242,7 @@ def generate_driver_report(trend_data: List[Dict[str, Any]], output_dir: str = "
         pdf.set_text_color(0, 0, 0)
         pdf.multi_cell(0, 10, latest_report.get("action", "No specific recommendations"))
         
-        # Timeline Table
-        pdf.section_title("Violation Timeline")
-        pdf.set_font('Roboto', '', 9)
-        
+
         # Table headers
         pdf.set_fill_color(240, 240, 240)
         pdf.cell(40, 10, "Date", 1, 0, 'C', 1)
