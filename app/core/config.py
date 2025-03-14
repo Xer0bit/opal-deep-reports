@@ -7,9 +7,9 @@ class Settings(BaseSettings):
     API_PREFIX: str = "/api/v1"
     
     # MongoDB Settings
-    MONGODB_URL: str = "mongodb://localhost:27017"
-    MONGODB_DB_NAME: str = "predictive_analytics"
-    DATABASE_URL: str = "mongodb://localhost:27017/db"
+    MONGODB_URL: str = "mongodb://opal:4411opal%40stms%23%234411@3.144.134.141:27017/opal_server?authSource=admin"
+    MONGODB_DB_NAME: str = "opal_server"
+    DATABASE_URL: str = MONGODB_URL
     
     # Security Settings
     SECRET_KEY: str = "default_secret_key"

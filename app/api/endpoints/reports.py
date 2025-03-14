@@ -41,7 +41,6 @@ async def get_violation_trends(params: TimeRangeRequest, generate_pdf: bool = Fa
             
         trends = await analyze_violation_trends(
             group_by=params.group_by,
-            days=params.days,
             start_date=start_date,
             end_date=end_date,
             driver_uuid=params.driver_uuid

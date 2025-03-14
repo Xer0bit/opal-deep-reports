@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Any
 from app.db.repositories.data_repository import DataRepository
 from app.core.logger import get_logger
+import re
 
 # Initialize repository
 data_repository = DataRepository()
@@ -17,7 +18,7 @@ class PredictiveAnalyticsService:
         # Implement risk score calculation logic based on vehicle data
         risk_score = 0.0
         # Example logic (to be replaced with actual calculation)
-        if vehicle_data.get("violation_count", 0) > 5:
+        if vehicle_data.get("violation_count", 0) > 60:
             risk_score += 10.0
         if vehicle_data.get("accident_history", False):
             risk_score += 15.0
@@ -49,7 +50,7 @@ class PredictiveAnalyticsService:
         }
         return analysis_results
 
-async def analyze_violation_trends(group_by: str = "day", days: int = 30, 
+async def analyze_violation_trends(group_by: str = "day",
                                  start_date: datetime = None, end_date: datetime = None,
                                  driver_uuid: str = None):
     """
@@ -58,16 +59,16 @@ async def analyze_violation_trends(group_by: str = "day", days: int = 30,
     try:
         if not start_date:
             end_date = datetime.now()
-            start_date = end_date - timedelta(days=days)
+            start_date = end_date - timedelta(days=30)  # Default to 30 days if dates not provided
         
         logger.info(f"Analyzing violation trends from {start_date} to {end_date}"
-                   f"{' for driver ' + driver_uuid if driver_uuid else ''}")
+                   f"{' for driver ' + driver_uuid if driver_uuid else ' for all drivers'}")
         
         trend_data = await data_repository.get_violation_trends(
             group_by=group_by,
             start_date=start_date,
             end_date=end_date,
-            driver_uuid=driver_uuid
+            driver_uuid=driver_uuid  # If None, repository should return data for all drivers
         )
         
         # Process time-based trends with driver information
@@ -77,18 +78,18 @@ async def analyze_violation_trends(group_by: str = "day", days: int = 30,
             try:
                 period_info = item["_id"]
                 time_period = period_info["time_period"]
-                driver_uuid = period_info["driver_uuid"]
+                curr_driver_uuid = period_info["driver_uuid"]
                 driver_name = period_info["driver_name"]
                 violation_type = period_info["violation_type"]
                 count = item["count"]
                 high_severity = item.get("high_severity_count", 0)
                 
-                period_key = f"{time_period}_{driver_uuid}"
+                period_key = f"{time_period}_{curr_driver_uuid}"
                 
-                if period_key not in time_periods:
+                if (period_key) not in time_periods:
                     time_periods[period_key] = {
                         "time_period": time_period,
-                        "driver_uuid": driver_uuid,
+                        "driver_uuid": curr_driver_uuid,
                         "driver_name": driver_name,
                         "total_violations": 0,
                         "violation_types": {},
@@ -143,33 +144,21 @@ async def analyze_violation_trends(group_by: str = "day", days: int = 30,
         raise
 
 async def predict_driver_risk(days_history: int = 90):
-    """
-    Predict driver risk scores based on historical data
-    """
-    # Update violation config with default values
+    """Predict driver risk scores based on historical data"""
+    # Updated violation weights and configuration
     VIOLATION_CONFIG = {
-        "SPEED_LOW": {"weight": 1.0, "severity": 1.0, "priority": 1, "decay_days": 30},
-        "SPEED_MEDIUM": {"weight": 2.5, "severity": 2.0, "priority": 2, "decay_days": 45},
-        "SPEED_HIGH": {"weight": 4.0, "severity": 3.0, "priority": 3, "decay_days": 60},
-        "HARSH_ACCELERATION": {"weight": 2.0, "severity": 2.0, "priority": 2, "decay_days": 30},
-        "SUDDEN_TURN": {"weight": 2.5, "severity": 2.0, "priority": 2, "decay_days": 30},
-        "GPS_QUALITY": {"weight": 0.5, "severity": 1.0, "priority": 1, "decay_days": 15},
-        "BATTERY_WARNING": {"weight": 0.5, "severity": 1.0, "priority": 1, "decay_days": 15},
-        "HARD_BRAKING": {"weight": 3.5, "severity": 3.0, "priority": 3, "decay_days": 45},
-        "EXTREME_ACCELERATION": {"weight": 4.0, "severity": 3.0, "priority": 3, "decay_days": 45},
-        "CRASH_DETECTION": {"weight": 5.0, "severity": 4.0, "priority": 4, "decay_days": 90},
-        "UNKNOWN": {
-            "weight": 1.0, 
-            "severity": 1.0, 
-            "priority": 1, 
-            "decay_days": 30,
-            "default_score": 20  # Base score for unknown violations
-        }
+        "SPEED_LOW": {"base_weight": 15.0, "severity": 2.0, "multiplier": 1.5},
+        "SPEED_MEDIUM": {"base_weight": 25.0, "severity": 3.0, "multiplier": 2.0},
+        "SPEED_HIGH": {"base_weight": 35.0, "severity": 4.0, "multiplier": 2.5},
+        "HARSH_ACCELERATION": {"base_weight": 20.0, "severity": 2.5, "multiplier": 1.8},
+        "HARD_BRAKING": {"base_weight": 20.0, "severity": 2.5, "multiplier": 1.8},
+        "CRASH_DETECTION": {"base_weight": 40.0, "severity": 5.0, "multiplier": 3.0},
+        "UNKNOWN": {"base_weight": 10.0, "severity": 1.0, "multiplier": 1.0}
     }
 
-    logger.info(f"Starting driver risk prediction for last {days_history} days")
-    
     try:
+        logger.info(f"Starting driver risk prediction for last {days_history} days")
+        
         # Get driver data from the repository
         driver_data = await data_repository.get_driver_risk_data(days=days_history)
         logger.info(f"Retrieved {len(driver_data) if driver_data else 0} driver records")
@@ -184,107 +173,154 @@ async def predict_driver_risk(days_history: int = 90):
         processed_drivers = []
         for driver in driver_data:
             try:
-                # Validate and set default values for missing data
+                # Basic validation
                 violation_count = max(0, driver.get("violation_count", 0))
                 violation_types = driver.get("violation_types", [])
-                if not violation_types and violation_count > 0:
-                    violation_types = ["UNKNOWN"] * violation_count
+                last_violation = driver.get("last_violation")
                 
-                name = driver.get("name", "").strip() or "Unknown Driver"
-                driver_id = driver.get("_id", "").strip()
+                # Convert last_violation to datetime if needed
+                if isinstance(last_violation, str):
+                    last_violation = datetime.fromisoformat(last_violation.replace('Z', '+00:00'))
+
+                # 1. Calculate Time-Based Components
+                hours_since_last = float('inf')
+                if last_violation:
+                    hours_since_last = (datetime.now() - last_violation).total_seconds() / 3600
                 
-                if not driver_id:
-                    logger.warning(f"Missing driver ID for {name}")
-                    continue
-                
-                # Calculate weighted score with data validation
-                weighted_score = 0
-                max_severity = 0
-                violation_counts = {}
+                time_factor = 1.0
+                if hours_since_last < 1:  # Last hour
+                    time_factor = 2.0
+                elif hours_since_last < 24:  # Last day
+                    time_factor = 1.5
+                elif hours_since_last < 72:  # Last 3 days
+                    time_factor = 1.2
+
+                # 2. Violation Frequency Score
+                days_active = min(days_history, 3)  # Focus on recent activity
+                daily_rate = violation_count / days_active
+                frequency_score = min(50, daily_rate * 0.5)  # Base frequency score
+
+                # Progressive scaling for high frequencies
+                if daily_rate > 50:
+                    frequency_score *= 1.5
+                elif daily_rate > 30:
+                    frequency_score *= 1.3
+                elif daily_rate > 20:
+                    frequency_score *= 1.2
+
+                # 3. Violation Type Scoring
+                type_scores = {}
+                violation_weights = 0
+                total_severity = 0
                 
                 for v_type in violation_types:
                     config = VIOLATION_CONFIG.get(v_type, VIOLATION_CONFIG["UNKNOWN"])
-                    count = violation_counts.get(v_type, 0) + 1
-                    violation_counts[v_type] = count
+                    count = violation_types.count(v_type)
                     
-                    # Apply more weight to known violation types
-                    type_weight = config["weight"] if v_type != "UNKNOWN" else config["weight"] * 0.5
-                    weighted_score += type_weight * count
-                    max_severity = max(max_severity, config["severity"])
+                    # Calculate progressive weight increase
+                    weight = config["base_weight"] * (1 + (count - 1) * 0.1)  # 10% increase per violation
+                    severity = config["severity"] * config["multiplier"]
+                    
+                    type_scores[v_type] = {
+                        "count": count,
+                        "weight": weight,
+                        "severity": severity,
+                        "score": weight * severity * count
+                    }
+                    
+                    violation_weights += weight * count
+                    total_severity += severity * count
 
-                # Adjust scoring for incomplete data
-                daily_rate = violation_count / max(days_history/30, 1)
-                count_score = min(100, daily_rate * 15)  # Reduced multiplier for more gradual scaling
-                severity_score = max_severity * 20  # Adjusted severity impact
-                
-                # Enhanced recency calculation
-                last_violation = driver.get("last_violation")
-                if isinstance(last_violation, str):
-                    try:
-                        last_violation = datetime.fromisoformat(last_violation.replace('Z', '+00:00'))
-                    except (ValueError, TypeError):
-                        last_violation = None
-                
-                # Calculate recency with validation
-                days_since_last = None
-                if last_violation:
-                    days_since_last = (datetime.now() - last_violation).days
-                    recency_factor = 1.3 if days_since_last == 0 else (
-                        1.2 if days_since_last <= 3 else (
-                        1.1 if days_since_last <= 7 else (
-                        0.9 if days_since_last <= 14 else 0.8)))
-                else:
-                    days_since_last = days_history  # Assume oldest possible violation
-                    recency_factor = 0.8
-                
-                # Calculate final risk score with balanced components
+                # 4. Calculate Weighted Severity Score
+                avg_severity = total_severity / max(1, len(violation_types))
+                severity_score = min(30, avg_severity * 2)  # Cap at 30
+
+                # 5. Speed Violation Impact
+                speed_violations = sum(1 for v in violation_types if v.startswith("SPEED_"))
+                speed_ratio = speed_violations / max(1, len(violation_types))
+                speed_impact = speed_ratio * 20  # Up to 20 points for speed violations
+
+                # 6. Final Score Calculation
                 base_score = (
-                    count_score * 0.35 +
-                    weighted_score * 0.35 +
-                    severity_score * 0.3
-                )
+                    frequency_score * 0.35 +    # Frequency component (35%)
+                    severity_score * 0.25 +     # Severity component (25%)
+                    speed_impact * 0.20 +       # Speed violation impact (20%)
+                    violation_weights * 0.20    # Violation weights (20%)
+                ) * time_factor
+
+                # 7. Apply Thresholds and Caps
+                if violation_count > 200:
+                    base_score = max(base_score, 85)
+                elif violation_count > 150:
+                    base_score = max(base_score, 75)
+                elif violation_count > 100:
+                    base_score = max(base_score, 65)
+                elif violation_count > 50:
+                    base_score = max(base_score, 45)
+
+                # Final score with bounds
+                risk_score = min(95, max(20, base_score))
                 
-                # Apply recency and data completeness adjustments
-                data_completeness = 1.0
-                if not violation_types or "UNKNOWN" in violation_types:
-                    data_completeness = 0.9
+                # Calculate key factors based on risk components and patterns
+                key_factors = []
                 
-                risk_score = min(100, max(20, base_score * recency_factor * data_completeness))
-                driver["risk_score"] = round(risk_score, 1)
+                # Add violation count factor
+                key_factors.append(f"{violation_count} violations in {days_active} days")
                 
-                # Update risk factors with data quality indicators
-                risk_factors = []
-                if violation_count > 0:
-                    risk_factors.append(f"{violation_count} violations in {days_history} days")
-                    if "UNKNOWN" in violation_types:
-                        risk_factors.append("Some violation types unknown")
+                # Add speed violation factor if present
+                if speed_ratio > 0:
+                    speed_types = [v_type for v_type in violation_types if v_type.startswith("SPEED_")]
+                    speed_str = ", ".join(sorted(set(speed_types)))
+                    key_factors.append(f"Violation types: {speed_str}")
                 
-                # Add known violation types
-                known_violations = [v for v in violation_types if v != "UNKNOWN"]
-                if known_violations:
-                    risk_factors.append(f"Violation types: {', '.join(set(known_violations))}")
+                # Add recency factor
+                if hours_since_last != float('inf'):
+                    if hours_since_last < 1:
+                        key_factors.append("Recent violation (less than 1 hour ago)")
+                    elif hours_since_last < 24:
+                        key_factors.append("Recent violation (less than 24 hours ago)")
+                    elif hours_since_last < 72:
+                        key_factors.append(f"Recent violation ({int(hours_since_last/24)} days ago)")
                 
-                if days_since_last is not None and days_since_last < 7:
-                    risk_factors.append(f"Recent violation ({days_since_last} days ago)")
+                # Add frequency pattern factor
+                if daily_rate > 50:
+                    key_factors.append("Extremely high violation frequency")
+                elif daily_rate > 30:
+                    key_factors.append("Very high violation frequency")
+                elif daily_rate > 20:
+                    key_factors.append("High violation frequency")
                 
-                driver["key_factors"] = risk_factors if risk_factors else ["Insufficient violation data"]
-                
-                # Adjust recommendations based on data completeness
-                if risk_score > 70 and data_completeness > 0.9:
-                    driver["recommendation"] = "Immediate safety review required"
-                elif risk_score > 50:
-                    driver["recommendation"] = "Schedule training session"
-                elif risk_score > 30:
-                    driver["recommendation"] = "Monitor closely"
-                else:
-                    driver["recommendation"] = "Routine monitoring"
-                
+                # Add severity factor
+                if avg_severity > 2.5:
+                    key_factors.append("High severity violations")
+                elif avg_severity > 1.5:
+                    key_factors.append("Moderate severity violations")
+
+                # Update driver data with key factors and risk information
+                driver.update({
+                    "risk_score": round(risk_score, 1),
+                    "key_factors": key_factors,
+                    "risk_components": {
+                        "frequency_score": round(frequency_score, 2),
+                        "severity_score": round(severity_score, 2),
+                        "speed_impact": round(speed_impact, 2),
+                        "time_factor": round(time_factor, 2),
+                        "daily_violation_rate": round(daily_rate, 2)
+                    },
+                    "recommendation": (
+                        "Critical - Immediate Intervention Required" if risk_score >= 75
+                        else "High Risk - Urgent Review Needed" if risk_score >= 60
+                        else "Moderate Risk - Schedule Review" if risk_score >= 45
+                        else "Low Risk - Regular Monitoring"
+                    )
+                })
+
                 processed_drivers.append(driver)
-                
+
             except Exception as e:
                 logger.error(f"Error processing driver {driver.get('_id')}: {str(e)}")
                 continue
-        
+
         logger.info(f"Successfully processed {len(processed_drivers)} drivers")
         return sorted(processed_drivers, key=lambda x: x["risk_score"], reverse=True)
         
@@ -292,69 +328,198 @@ async def predict_driver_risk(days_history: int = 90):
         logger.error(f"Error in predict_driver_risk: {str(e)}", exc_info=True)
         raise
 
+def calculate_time_window(timeframe: str) -> tuple[datetime, datetime]:
+    """Calculate start and end time based on timeframe"""
+    pattern = re.compile(r'^(\d+)([mhd])$')
+    match = pattern.match(timeframe)
+    if not match:
+        raise ValueError("Invalid timeframe format")
+    
+    value, unit = int(match.group(1)), match.group(2)
+    end_time = datetime.now()
+    
+    if unit == 'm':
+        start_time = end_time - timedelta(minutes=value)
+    elif unit == 'h':
+        start_time = end_time - timedelta(hours=value)
+    else:
+        start_time = end_time - timedelta(days=value)
+        
+    return start_time, end_time
+
 async def perform_real_time_analysis(timeframe: str = "1h", driver_uuid: str = None) -> Dict[str, Any]:
     """
     Perform real-time analysis of vehicle and violation data
     Args:
-        timeframe: Time window for analysis ("1h" or "24h")
+        timeframe: Time window for analysis (e.g., "30m", "2h", "3d")
         driver_uuid: Optional driver UUID to filter results
     """
     try:
-        repo = DataRepository()
-        end_time = datetime.now()
-        start_time = end_time - timedelta(hours=1 if timeframe == "1h" else 24)
+        start_time, end_time = calculate_time_window(timeframe)
+        logger.debug(f"Analyzing time window from {start_time} to {end_time}")
         
-        # Get recent violations with proper time range
-        time_range = {"$gte": start_time, "$lte": end_time}
-        violations = await repo.get_violations(
-            time_range=time_range,
+        # Calculate time difference once for use throughout the function
+        time_diff = end_time - start_time
+        hours = time_diff.total_seconds() / 3600
+        logger.debug(f"Time window: {hours} hours")
+        
+        # Get violations with expanded query
+        violations = await data_repository.get_violations(
+            time_range={"$gte": start_time, "$lte": end_time},
             filters={"driver_uuid": driver_uuid} if driver_uuid else None
         )
         
-        # Ensure violations is a list
-        violations = list(violations) if violations else []
-        
-        # Get vehicle events with consistent time range
-        vehicle_events = await repo.get_vehicle_events(
-            time_range=time_range,
+        # Get vehicle events
+        vehicle_events = await data_repository.get_vehicle_events(
+            time_range={"$gte": start_time, "$lte": end_time},
             vehicle_uuid=driver_uuid
         )
         
-        # Ensure vehicle_events is a list
-        vehicle_events = list(vehicle_events) if vehicle_events else []
+        # Convert cursors to lists
+        violations_list = list(violations) if violations else []
+        events_list = list(vehicle_events) if vehicle_events else []
         
-        # Create analysis dict with serializable values
+        # Group violations by driver when no specific driver is requested
+        drivers_data = {}
+        if not driver_uuid and violations_list:
+            for violation in violations_list:
+                curr_driver_uuid = violation.get("driver_uuid")
+                if curr_driver_uuid:
+                    if curr_driver_uuid not in drivers_data:
+                        # Enhanced driver name handling
+                        driver_name = violation.get("driver_name")
+                        if not driver_name or driver_name == "Unknown Driver":
+                            driver_name = f"Driver {curr_driver_uuid}"
+                        if curr_driver_uuid == "unknown":
+                            driver_name = "Unassigned Driver"
+                            
+                        drivers_data[curr_driver_uuid] = {
+                            "uuid": curr_driver_uuid,
+                            "name": driver_name,
+                            "violations": [],
+                            "events": [],
+                            "violation_types": {},
+                            "severity_counts": {"HIGH": 0, "MEDIUM": 0, "LOW": 0},
+                            "last_event_time": None
+                        }
+                    drivers_data[curr_driver_uuid]["violations"].append(violation)
+        
+        # Create analysis dict with enhanced defaults
         analysis = {
             "timeframe": timeframe,
-            "total_violations": len(violations),
-            "total_events": len(vehicle_events),
-            "analysis_timestamp": datetime.now().isoformat(),
+            "total_violations": len(violations_list),
+            "total_events": len(events_list),
+            "analysis_timestamp": datetime.now(),
             "violation_types": {},
             "risk_level": "LOW",
             "time_range": {
-                "start": start_time.isoformat(),
-                "end": end_time.isoformat()
+                "start": start_time,
+                "end": end_time
+            },
+            "stats": {
+                "hourly_rate": 0.0,
+                "has_data": bool(violations_list or events_list),
+                "last_event_time": None,
+                "severity_counts": {"HIGH": 0, "MEDIUM": 0, "LOW": 0},
+                "data_summary": {
+                    "violations_processed": len(violations_list),
+                    "events_processed": len(events_list),
+                    "time_window_hours": round(hours, 2),
+                    "time_window_display": (
+                        f"{time_diff.days}d" if time_diff.days > 0
+                        else f"{time_diff.seconds // 3600}h" if time_diff.seconds // 3600 > 0
+                        else f"{time_diff.seconds // 60}m"
+                    ),
+                    "data_available": bool(violations_list or events_list),
+                    "total_drivers": len(drivers_data) if not driver_uuid else 1
+                }
             }
         }
-        
-        if driver_uuid:
-            analysis["driver_uuid"] = driver_uuid
-            # Get driver details if available
-            driver_info = next((v.get("driver_info", {}) for v in violations if v.get("driver_info")), {})
-            if driver_info:
-                analysis["driver_name"] = driver_info.get("name", "Unknown")
-        
-        # Count violation types
-        for violation in violations:
-            v_type = violation.get("violation_type", "UNKNOWN")
-            analysis["violation_types"][v_type] = analysis["violation_types"].get(v_type, 0) + 1
-        
-        # Determine risk level based on violation frequency
-        hourly_rate = len(violations) / (1 if timeframe == "1h" else 24)
-        if hourly_rate > 10:
-            analysis["risk_level"] = "HIGH"
-        elif hourly_rate > 5:
-            analysis["risk_level"] = "MEDIUM"
+
+        # Add drivers array when no specific driver is requested
+        if not driver_uuid:
+            analysis["drivers"] = []
+            for d_uuid, d_data in drivers_data.items():
+                driver_violations = d_data["violations"]
+                driver_summary = {
+                    "uuid": d_uuid,
+                    "name": d_data["name"],
+                    "total_violations": len(driver_violations),
+                    "violation_types": {},
+                    "severity_counts": d_data["severity_counts"],
+                    "risk_level": "LOW"
+                }
+                
+                # Process violations for this driver
+                hourly_rate = len(driver_violations) / (1 if timeframe == "1h" else 24)
+                for violation in driver_violations:
+                    v_type = violation.get("violation_type", "UNKNOWN")
+                    severity = violation.get("severity", "LOW")
+                    driver_summary["violation_types"][v_type] = (
+                        driver_summary["violation_types"].get(v_type, 0) + 1
+                    )
+                    driver_summary["severity_counts"][severity] += 1
+                
+                # Set driver risk level
+                if (driver_summary["severity_counts"]["HIGH"] > 0 or 
+                    hourly_rate > 10):
+                    driver_summary["risk_level"] = "HIGH"
+                elif (driver_summary["severity_counts"]["MEDIUM"] > 3 or 
+                      hourly_rate > 5):
+                    driver_summary["risk_level"] = "MEDIUM"
+                
+                analysis["drivers"].append(driver_summary)
+            
+            # Sort drivers by violation count
+            analysis["drivers"].sort(
+                key=lambda x: (
+                    x["severity_counts"]["HIGH"],
+                    x["severity_counts"]["MEDIUM"],
+                    x["total_violations"]
+                ),
+                reverse=True
+            )
+        else:
+            # Single driver processing (existing logic)
+            driver_info = next((v.get("driver_info", {}) for v in violations_list if v.get("driver_info")), {})
+            analysis["driver_info"] = {
+                "uuid": driver_uuid,
+                "name": driver_info.get("name", "Unknown Driver"),
+                "status": driver_info.get("status", "ACTIVE"),
+                "last_known_activity": driver_info.get("last_activity", start_time.isoformat()),
+                "data_status": "Active" if violations_list or events_list else "No Recent Activity"
+            }
+
+        # Process all violations for statistics
+        if violations_list:
+            for violation in violations_list:
+                v_type = violation.get("violation_type", "UNKNOWN")
+                analysis["violation_types"][v_type] = (
+                    analysis["violation_types"].get(v_type, 0) + 1
+                )
+                
+                severity = violation.get("severity", "LOW")
+                analysis["stats"]["severity_counts"][severity] += 1
+                
+                event_time = violation.get("event_time")
+                if event_time:
+                    if not analysis["stats"]["last_event_time"] or event_time > analysis["stats"]["last_event_time"]:
+                        analysis["stats"]["last_event_time"] = event_time
+            
+            # Calculate hourly rate
+            hourly_rate = len(violations_list) / hours
+            analysis["stats"]["hourly_rate"] = round(hourly_rate, 2)
+            
+            # Overall risk level
+            high_severity = analysis["stats"]["severity_counts"]["HIGH"]
+            medium_severity = analysis["stats"]["severity_counts"]["MEDIUM"]
+            
+            if high_severity > 0 or hourly_rate > 10:
+                analysis["risk_level"] = "HIGH"
+            elif medium_severity > 3 or hourly_rate > 5:
+                analysis["risk_level"] = "MEDIUM"
+        else:
+            analysis["stats"]["data_summary"]["reason"] = "No violations found in specified timeframe"
         
         return analysis
         

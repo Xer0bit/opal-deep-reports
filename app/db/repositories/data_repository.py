@@ -25,36 +25,159 @@ class DataRepository:
         return self.db
 
     async def get_vehicle_events(self, time_range: Dict = None, vehicle_uuid: str = None, limit: int = 1000):
-        db = await self.get_database()
-        query = {}
-        if time_range:
-            query["timestamp"] = time_range
-        if vehicle_uuid:
-            query["vehicle.uuid"] = vehicle_uuid
         try:
-            cursor = db.vehicleevents.find(query).limit(limit)
-            return await cursor.to_list(length=limit)
+            db = await self.get_database()
+            query = {}
+            
+            # Log connection details
+            logger.debug(f"Fetching vehicle events from database: {db.name}")
+            
+            if time_range:
+                # Try multiple timestamp field names
+                query["$or"] = [
+                    {"timestamp": time_range},
+                    {"event_time": time_range},
+                    {"created_at": time_range}
+                ]
+            if vehicle_uuid:
+                query["$or"] = [
+                    {"vehicle.uuid": vehicle_uuid},
+                    {"vehicle_uuid": vehicle_uuid},
+                    {"driver_uuid": vehicle_uuid}
+                ]
+                
+            # Log query details
+            logger.debug(f"Vehicle events query: {query}")
+            logger.debug(f"Time range: {time_range}")
+            
+            try:
+                # List all collections for debugging
+                collections = await db.list_collection_names()
+                logger.debug(f"Available collections: {collections}")
+                
+                if 'vehicleevents' not in collections:
+                    # Try alternate collection names
+                    alt_collections = ['vehicle_events', 'events', 'tracking']
+                    for coll in alt_collections:
+                        if coll in collections:
+                            logger.info(f"Using alternate collection: {coll}")
+                            result = await db[coll].find(query).limit(limit).to_list(length=limit)
+                            if result:
+                                return result
+                    
+                    logger.error("No suitable events collection found")
+                    return []
+                
+                # Get sample document for field validation
+                sample = await db.vehicleevents.find_one()
+                if sample:
+                    logger.debug(f"Sample document fields: {list(sample.keys())}")
+                
+                count = await db.vehicleevents.count_documents(query)
+                logger.info(f"Found {count} matching vehicle events")
+                
+                results = await db.vehicleevents.find(query).limit(limit).to_list(length=limit)
+                logger.debug(f"Retrieved {len(results)} vehicle events")
+                return results
+                
+            except Exception as e:
+                logger.error(f"Database query error: {str(e)}", exc_info=True)
+                return []
+                
         except Exception as e:
-            logger.error(f"Error fetching vehicle events: {str(e)}")
+            logger.error(f"Error in get_vehicle_events: {str(e)}", exc_info=True)
             return []
 
     async def get_violations(self, start_date: datetime = None, end_date: datetime = None, 
                            time_range: Dict = None, filters: Dict = None, limit: int = 1000):
-        db = await self.get_database()
-        query = {}
-        
-        if start_date and end_date:
-            query["timestamp"] = {"$gte": start_date, "$lte": end_date}
-        elif time_range:
-            query["timestamp"] = time_range
-        if filters:
-            query.update(filters)
-            
         try:
-            cursor = db.violations.find(query).limit(limit)
-            return await cursor.to_list(length=limit)
+            db = await self.get_database()
+            query = {}
+            
+            logger.debug(f"Connected to database: {db.name}")
+            
+            # Time range query
+            if start_date and end_date:
+                query["$or"] = [
+                    {"timestamp": {"$gte": start_date, "$lte": end_date}},
+                    {"event_time": {"$gte": start_date, "$lte": end_date}},
+                    {"created_at": {"$gte": start_date, "$lte": end_date}}
+                ]
+            elif time_range:
+                query["$or"] = [
+                    {"timestamp": time_range},
+                    {"event_time": time_range},
+                    {"created_at": time_range}
+                ]
+
+            # Handle driver information lookup
+            pipeline = [
+                {"$match": query},
+                {
+                    "$lookup": {
+                        "from": "drivers",
+                        "localField": "driver_uuid",
+                        "foreignField": "driver_id",
+                        "as": "driver_info"
+                    }
+                },
+                {
+                    "$addFields": {
+                        "driver_name": {
+                            "$cond": [
+                                {"$gt": [{"$size": "$driver_info"}, 0]},
+                                {"$arrayElemAt": ["$driver_info.name", 0]},
+                                {
+                                    "$cond": [
+                                        {"$eq": ["$driver_uuid", "unknown"]},
+                                        "Unassigned Driver",
+                                        {"$concat": ["Driver ", {"$toString": "$driver_uuid"}]}
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+            
+            if filters:
+                # Handle driver UUID filter
+                if "driver_uuid" in filters:
+                    query["$or"] = query.get("$or", []) + [
+                        {"driver_uuid": filters["driver_uuid"]},
+                        {"driver.uuid": filters["driver_uuid"]},
+                        {"vehicle.driver_uuid": filters["driver_uuid"]}
+                    ]
+                    del filters["driver_uuid"]
+                pipeline[0]["$match"].update(filters)
+            
+            logger.debug(f"Violations pipeline: {pipeline}")
+            
+            try:
+                collections = await db.list_collection_names()
+                logger.debug(f"Available collections: {collections}")
+                
+                # Try multiple collection names
+                collection_names = ['violations', 'violation_events', 'driver_violations']
+                
+                for coll_name in collection_names:
+                    if coll_name in collections:
+                        logger.debug(f"Checking collection: {coll_name}")
+                        count = await db[coll_name].count_documents(query)
+                        if count > 0:
+                            logger.info(f"Found {count} documents in {coll_name}")
+                            results = await db[coll_name].aggregate(pipeline).to_list(length=limit)
+                            return results
+                
+                logger.warning("No violations found in any collection")
+                return []
+                
+            except Exception as e:
+                logger.error(f"Database query error: {str(e)}", exc_info=True)
+                return []
+                
         except Exception as e:
-            logger.error(f"Error fetching violations: {str(e)}")
+            logger.error(f"Error in get_violations: {str(e)}", exc_info=True)
             return []
 
     async def get_violation_trends(self, group_by: str = "hour", start_date: datetime = None, 
