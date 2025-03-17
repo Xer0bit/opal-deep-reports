@@ -149,11 +149,16 @@ def create_modern_chart(data: Dict[str, int], title: str, chart_type: str = 'bar
     
     return buf.getvalue()
 
-def generate_driver_report(trend_data: List[Dict[str, Any]], output_dir: str = "reports") -> str:
-    # Validate input data
-    if not trend_data:
-        raise ValueError("No trend data provided")
-
+def generate_driver_report(trend_data: List[Dict[str, Any]], 
+                         period_info: Dict[str, Any] = None,
+                         output_dir: str = "reports") -> str:
+    """
+    Generate PDF report for driver violations
+    Args:
+        trend_data: List of violation trend data
+        period_info: Optional period information for empty reports
+        output_dir: Output directory for the report
+    """
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{output_dir}/driver_violations_{timestamp}.pdf"
@@ -162,6 +167,29 @@ def generate_driver_report(trend_data: List[Dict[str, Any]], output_dir: str = "
     pdf.set_title("Driver Safety Analysis Report")
     pdf.set_author("Opal Analytics System")
     
+    # Executive Summary Page
+    pdf.add_page()
+    pdf.chapter_title("Executive Summary")
+    
+    if not trend_data:
+        pdf.set_font('Roboto', '', 10)
+        summary_text = "No violations found for the specified period.\n\n"
+        
+        if period_info:
+            start_date = period_info.get('start_date', 'Unknown')
+            end_date = period_info.get('end_date', 'Unknown')
+            driver_id = period_info.get('driver_uuid', 'All Drivers')
+            
+            summary_text += f"""
+            Period: {start_date} to {end_date}
+            Driver ID: {driver_id}
+            """
+        
+        pdf.multi_cell(0, 10, summary_text)
+        pdf.output(filename)
+        return filename
+    
+    # Continue with normal report generation for non-empty data
     # Group data by driver
     driver_reports = {}
     for item in trend_data:

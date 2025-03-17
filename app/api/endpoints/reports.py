@@ -38,13 +38,35 @@ async def get_violation_trends(params: TimeRangeRequest, generate_pdf: bool = Fa
             start_date = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
         if isinstance(end_date, str):
             end_date = datetime.fromisoformat(end_date.replace('Z', '+00:00'))
-            
+        
         trends = await analyze_violation_trends(
             group_by=params.group_by,
             start_date=start_date,
             end_date=end_date,
             driver_uuid=params.driver_uuid
         )
+        
+        if not trends:
+            logger.info("No violation trends found for the specified period")
+            if generate_pdf:
+                # Generate empty report with period information
+                pdf_path = generate_driver_report([], 
+                    period_info={
+                        'start_date': start_date,
+                        'end_date': end_date,
+                        'driver_uuid': params.driver_uuid
+                    }
+                )
+                return FileResponse(
+                    pdf_path,
+                    filename=f"driver_violations_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
+                    media_type="application/pdf"
+                )
+            return {
+                "trends": [],
+                "total_count": 0,
+                "date_range": {"start_date": start_date, "end_date": end_date}
+            }
         
         response_data = {
             "trends": trends,
@@ -69,7 +91,7 @@ async def get_violation_trends(params: TimeRangeRequest, generate_pdf: bool = Fa
         
     except Exception as e:
         logger.error(f"Error analyzing violation trends: {str(e)}", exc_info=True)
-        raise HTTPException(status_code=500, detail=f"Error analyzing violation trends: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/driver-risk", response_model=DriverRiskResponse)
 async def get_driver_risk(days: int = Query(90, description="Historical data period in days")):
