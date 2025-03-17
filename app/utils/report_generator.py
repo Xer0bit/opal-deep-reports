@@ -150,6 +150,10 @@ def create_modern_chart(data: Dict[str, int], title: str, chart_type: str = 'bar
     return buf.getvalue()
 
 def generate_driver_report(trend_data: List[Dict[str, Any]], output_dir: str = "reports") -> str:
+    # Validate input data
+    if not trend_data:
+        raise ValueError("No trend data provided")
+
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{output_dir}/driver_violations_{timestamp}.pdf"
@@ -174,10 +178,13 @@ def generate_driver_report(trend_data: List[Dict[str, Any]], output_dir: str = "
                          for reports in driver_reports.values())
     
     pdf.set_font('Roboto', '', 10)
+    period_text = (f"Period: {trend_data[0]['time_period']} to {trend_data[-1]['time_period']}"
+                  if trend_data else "No period data available")
+    
     pdf.multi_cell(0, 10, f"""
     This report analyzes driving behavior and safety patterns across {total_drivers} drivers.
     Total violations recorded: {total_violations}
-    Period: {trend_data[0]['time_period']} to {trend_data[-1]['time_period']}
+    {period_text}
     """)
     
     # Generate Fleet-wide Statistics
