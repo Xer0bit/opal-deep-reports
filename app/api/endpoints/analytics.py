@@ -63,7 +63,7 @@ async def get_real_time_analysis(
             "meta": {
                 "duration_ms": round((datetime.now() - start_time).total_seconds() * 1000),
                 "driver_filter": driver_uuid,
-                "driver_name": data["driver_name"]
+                "driver_name": data.get("driver_name", None)
             }
         }
 

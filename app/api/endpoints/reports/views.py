@@ -1,11 +1,14 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import FileResponse
-from typing import List, Optional
-from datetime import datetime, timedelta
-from pydantic import BaseModel
+from datetime import datetime
 from app.core.logger import get_logger
+from app.models.schemas import TimeRangeRequest, ViolationTrendsResponse, DriverRiskResponse
+from app.services.predictive_analytics import analyze_violation_trends, predict_driver_risk
+from app.utils.report_generator import generate_driver_report
 
 logger = get_logger(__name__)
+router = APIRouter()
+
 
 from app.models.schemas import (
     TimeRangeRequest,

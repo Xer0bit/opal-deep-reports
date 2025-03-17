@@ -1,10 +1,9 @@
 from fpdf import FPDF
 import matplotlib.pyplot as plt
-import seaborn as sns
-from datetime import datetime
 import os
-from typing import List, Dict, Any
+from datetime import datetime
 import io
+from typing import List, Dict, Any
 from .file_cleanup import FileCleanupManager
 
 # Get the absolute paths
@@ -12,186 +11,185 @@ FONTS_DIR = os.path.join(os.path.dirname(__file__), 'fonts')
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), 'assets')
 LOGO_PATH = os.path.join(ASSETS_DIR, 'opal_logo.png')
 
-# Update color scheme with modern colors
+# Clean professional color scheme
 COLORS = {
-    'primary': {'r': 41, 'g': 128, 'b': 185},     # Modern Blue
-    'secondary': {'r': 52, 'g': 152, 'b': 219},   # Light Blue
-    'accent': {'r': 46, 'g': 204, 'b': 113},      # Green
-    'warning': {'r': 231, 'g': 76, 'b': 60},      # Red
-    'success': {'r': 46, 'g': 204, 'b': 113},     # Green
-    'text': {'r': 52, 'g': 73, 'b': 94},          # Dark Blue-Gray
-    'light': {'r': 236, 'g': 240, 'b': 241},      # Light Gray
-    'highlight': {'r': 155, 'g': 89, 'b': 182}    # Purple
+    'primary': {'r': 0, 'g': 82, 'b': 156},      # Dark Blue
+    'secondary': {'r': 45, 'g': 55, 'b': 72},    # Dark Gray
+    'text': {'r': 50, 'g': 50, 'b': 50},         # Near Black
+    'light_gray': {'r': 240, 'g': 240, 'b': 240},# Light Gray
+    'medium_gray': {'r': 200, 'g': 200, 'b': 200},# Medium Gray
+    'white': {'r': 255, 'g': 255, 'b': 255}      # White
 }
 
 # Violation type colors
 VIOLATION_COLORS = {
-    'SPEED_HIGH': '#DC3545',    # Red for high severity
-    'SPEED_MEDIUM': '#FD7E14',  # Orange for medium severity
-    'SPEED_LOW': '#FFC107',     # Yellow for low severity
-    'DEFAULT': '#6C757D'        # Gray for others
+    'SPEED_HIGH': '#CC0000',      # Dark Red
+    'SPEED_MEDIUM': '#FF6600',    # Orange
+    'SPEED_LOW': '#FFCC00',       # Yellow
+    'HARSH_ACCELERATION': '#9933CC', # Purple
+    'HARD_BRAKING': '#3366FF',    # Blue
+    'CRASH_DETECTION': '#990000', # Dark Red
+    'DEFAULT': '#666666'          # Gray
 }
 
-class ModernReportPDF(FPDF):
+class CleanReportPDF(FPDF):
+    """Simple, clean PDF report generator"""
+    
     def __init__(self):
         super().__init__()
-        self.set_auto_page_break(auto=True, margin=25)  # Increased margin
-        self.set_margins(left=20, top=25, right=20)     # Better margins
+        self.set_auto_page_break(auto=True, margin=20)
+        self.set_margins(15, 20, 15)
         
-        # Add fonts with absolute paths
+        # Add fonts
         self.add_font('Roboto', '', os.path.join(FONTS_DIR, 'Roboto-Regular.ttf'), uni=True)
         self.add_font('Roboto', 'B', os.path.join(FONTS_DIR, 'Roboto-Bold.ttf'), uni=True)
-        
+    
     def header(self):
-        # Gradient-style header
-        self.set_fill_color(**COLORS['primary'])
-        self.rect(0, 0, self.w, 30, 'F')
-        self.set_fill_color(**COLORS['secondary'])
-        self.rect(0, 30, self.w, 2, 'F')  # Accent line
-        
-        # Logo
+        """Simple professional header with logo and title"""
+        # Add logo if exists
         if os.path.exists(LOGO_PATH):
-            self.image(LOGO_PATH, 15, 5, 20)
+            self.image(LOGO_PATH, 15, 12, 22)
             
+        # Add blue header line
+        self.set_draw_color(**COLORS['primary'])
+        self.set_line_width(0.5)
+        self.line(15, 38, 195, 38)
+        
         # Title
-        self.set_font('Roboto', 'B', 18)
-        self.set_text_color(255, 255, 255)
-        self.cell(25)  # Space after logo
-        self.cell(0, 30, 'Driver Safety Report', 0, 1, 'L')
+        self.set_font('Roboto', 'B', 16)
+        self.set_text_color(**COLORS['primary'])
+        self.set_xy(40, 15)
+        self.cell(0, 10, 'Driver Safety Report', 0, 1, 'L')
+        
+        # Subtitle with date
+        self.set_font('Roboto', '', 10)
+        self.set_text_color(**COLORS['secondary'])
+        self.set_xy(40, 25)
+        self.cell(0, 10, f'Generated: {datetime.now().strftime("%Y-%m-%d %H:%M")}', 0, 1, 'L')
+        
+        # Add space after header
+        self.ln(20)
 
     def footer(self):
-        self.set_y(-25)
-        self.set_font('Roboto', '', 8)
-        self.set_text_color(**COLORS['text'])
-        
-        # Modern footer with multiple elements
-        self.set_fill_color(**COLORS['light'])
-        self.rect(0, self.get_y(), self.w, 25, 'F')
-        
-        # Footer content
+        """Simple footer with page number"""
         self.set_y(-20)
-        current_date = datetime.now().strftime("%Y-%m-%d %H:%M")
-        self.cell(0, 10, f'Generated: {current_date}', 0, 0, 'L')
+        
+        # Add line
+        self.set_draw_color(**COLORS['medium_gray'])
+        self.set_line_width(0.3)
+        self.line(15, self.get_y(), 195, self.get_y())
+        
+        # Add page number
+        self.set_font('Roboto', '', 8)
+        self.set_text_color(**COLORS['secondary'])
         self.cell(0, 10, f'Page {self.page_no()}', 0, 0, 'R')
 
-    def chapter_title(self, title):
-        self.set_font('Roboto', 'B', 16)
-        self.set_fill_color(**COLORS['primary'])
-        self.set_text_color(255, 255, 255)
-        self.cell(0, 12, title, 0, 1, 'L', 1)
-        self.ln(10)
-
-    def section_title(self, title):
+    def add_title(self, title):
+        """Add a section title"""
         self.set_font('Roboto', 'B', 14)
         self.set_text_color(**COLORS['primary'])
-        self.cell(0, 10, '□ ' + title, 0, 1, 'L')  # Added modern bullet point
+        self.cell(0, 10, title, 0, 1, 'L')
+        
+        # Add underline
+        self.set_draw_color(**COLORS['primary'])
+        self.set_line_width(0.3)
+        self.line(15, self.get_y(), 195, self.get_y())
         self.ln(5)
 
-    def stat_box(self, label, value, fill_color=None):
-        """Add a modern stat box"""
-        original_fill = self.get_fill_color()
+    def add_subtitle(self, subtitle):
+        """Add a subsection title"""
+        self.set_font('Roboto', 'B', 12)
+        self.set_text_color(**COLORS['secondary'])
+        self.cell(0, 10, subtitle, 0, 1, 'L')
+        self.ln(2)
         
-        if fill_color:
-            self.set_fill_color(**fill_color)
-        else:
-            self.set_fill_color(**COLORS['light'])
-            
-        self.rect(self.get_x(), self.get_y(), 90, 25, 'F')
+    def add_info_row(self, label, value):
+        """Add a label-value pair with consistent formatting"""
+        self.set_font('Roboto', 'B', 10)
+        self.set_text_color(**COLORS['secondary'])
+        self.cell(60, 8, label, 0, 0, 'L')
         
-        # Label
         self.set_font('Roboto', '', 10)
         self.set_text_color(**COLORS['text'])
-        self.set_xy(self.get_x() + 5, self.get_y() + 5)
-        self.cell(80, 6, label, 0, 2, 'L')
-        
-        # Value
-        self.set_font('Roboto', 'B', 12)
-        self.cell(80, 10, str(value), 0, 0, 'L')
-        
-        # Reset fill color
-        self.set_fill_color(**original_fill)
-        self.ln(30)
+        self.cell(0, 8, str(value), 0, 1, 'L')
 
-def create_modern_chart(data: Dict[str, int], title: str, chart_type: str = 'bar') -> bytes:
-    # Use a built-in style that works better
-    plt.style.use('bmh')  # Changed from seaborn to bmh style
+    def add_table(self, headers, data):
+        """Add a clean, professional table"""
+        # Set up widths based on headers
+        col_widths = [40, 30, 60, 50]
+        if len(col_widths) != len(headers):
+            col_widths = [180 / len(headers)] * len(headers)
+        
+        # Headers
+        self.set_font('Roboto', 'B', 10)
+        self.set_fill_color(**COLORS['light_gray'])
+        self.set_text_color(**COLORS['secondary'])
+        
+        for i, header in enumerate(headers):
+            self.cell(col_widths[i], 8, header, 1, 0, 'C', 1)
+        self.ln()
+        
+        # Data rows
+        self.set_font('Roboto', '', 10)
+        self.set_text_color(**COLORS['text'])
+        
+        fill = False
+        for row in data:
+            for i, cell in enumerate(row):
+                self.cell(col_widths[i], 8, str(cell), 1, 0, 'L', fill)
+            self.ln()
+            fill = not fill  # Alternate row colors
+
+def create_clean_chart(data: Dict[str, int], title: str, chart_type: str = 'bar') -> bytes:
+    """Create clean, professional charts with minimal styling"""
+    # Reset any previous styling
+    plt.rcdefaults()
+    plt.style.use('default')
     
-    fig, ax = plt.subplots(figsize=(10, 6), dpi=300)
-    
-    # Set background colors
-    ax.set_facecolor('#ffffff')
-    fig.patch.set_facecolor('#ffffff')
-    
-    # Enhanced grid styling
-    ax.yaxis.grid(True, linestyle='--', alpha=0.7, color='#cccccc')
-    ax.xaxis.grid(False)
+    fig, ax = plt.subplots(figsize=(10, 5.5))
+    fig.patch.set_facecolor('white')
+    ax.set_facecolor('white')
     
     if chart_type == 'bar':
-        # Assign colors based on violation type with enhanced styling
-        colors = [VIOLATION_COLORS.get(key, VIOLATION_COLORS['DEFAULT']) 
-                 for key in data.keys()]
-        
+        # Create bar chart
+        colors = [VIOLATION_COLORS.get(key, VIOLATION_COLORS['DEFAULT']) for key in data.keys()]
         bars = ax.bar(range(len(data)), list(data.values()), color=colors)
+        
+        # Configure axes
         ax.set_xticks(range(len(data)))
         ax.set_xticklabels(list(data.keys()), rotation=45, ha='right')
         
-        # Enhanced bar labels
+        # Add values on top of bars
         for bar in bars:
             height = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width()/2., height,
-                   f'{int(height):,}',  # Added thousands separator
-                   ha='center', va='bottom',
-                   color='#333333',
-                   fontweight='bold',
-                   fontsize=9,
-                   bbox=dict(facecolor='white', alpha=0.8, edgecolor='none', pad=1))
-            
-            # Add gradient effect
-            bar.set_alpha(0.85)
-            
+            ax.text(bar.get_x() + bar.get_width()/2., height + 0.1,
+                   f'{int(height)}', ha='center', va='bottom', fontsize=9)
+    
     elif chart_type == 'pie':
-        # Enhanced pie chart styling
-        colors = [VIOLATION_COLORS.get(key, VIOLATION_COLORS['DEFAULT']) 
-                 for key in data.keys()]
-        
-        wedges, texts, autotexts = ax.pie(
-            data.values(), 
+        # Create pie chart
+        colors = [VIOLATION_COLORS.get(key, VIOLATION_COLORS['DEFAULT']) for key in data.keys()]
+        ax.pie(
+            data.values(),
             labels=data.keys(),
             colors=colors,
             autopct='%1.1f%%',
-            textprops={'color': "#333333", 'fontsize': 9},
-            wedgeprops={'edgecolor': 'white', 'linewidth': 2, 'alpha': 0.85}
+            startangle=90
         )
-        
-        # Enhance pie chart text
-        plt.setp(autotexts, weight="bold")
-        plt.setp(texts, weight="bold")
-        ax.axis('equal')
+        ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
     
-    # Enhanced title styling
-    ax.set_title(title, pad=20, fontsize=14, fontweight='bold', 
-                 color=(COLORS['text']['r']/255,
-                        COLORS['text']['g']/255,
-                        COLORS['text']['b']/255))
+    # Add title
+    ax.set_title(title, pad=15, fontsize=12, fontweight='bold')
     
-    if chart_type == 'bar':
-        # Clean up bar chart spines
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.spines['bottom'].set_visible(True)
-        ax.spines['left'].set_visible(True)
-        ax.spines['bottom'].set_color('#cccccc')
-        ax.spines['left'].set_color('#cccccc')
-        ax.tick_params(colors='#666666', grid_alpha=0.3)
+    # Clean up chart
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
     
     plt.tight_layout()
     
-    # Save with enhanced quality
+    # Save to memory
     buf = io.BytesIO()
-    plt.savefig(buf, format='png', bbox_inches='tight', dpi=300,
-                facecolor='white', edgecolor='none',
-                pad_inches=0.2)
-    plt.close()
+    plt.savefig(buf, format='png', bbox_inches='tight', dpi=300)
+    plt.close(fig)
     
     return buf.getvalue()
 
@@ -199,40 +197,41 @@ def generate_driver_report(trend_data: List[Dict[str, Any]],
                          period_info: Dict[str, Any] = None,
                          output_dir: str = "reports",
                          cleanup_minutes: int = 30) -> str:
-    """
-    Generate PDF report for driver violations
-    Args:
-        trend_data: List of violation trend data
-        period_info: Optional period information for empty reports
-        output_dir: Output directory for the report
-    """
+    """Generate a clean, professional driver violations report"""
+    # Create output directory if needed
     os.makedirs(output_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{output_dir}/driver_violations_{timestamp}.pdf"
     
-    pdf = ModernReportPDF()
+    # Initialize PDF
+    pdf = CleanReportPDF()
     pdf.set_title("Driver Safety Analysis Report")
     pdf.set_author("Opal Analytics System")
     
-    # First page with executive summary
+    # Create first page
     pdf.add_page()
     
+    # Handle empty data case
     if not trend_data:
+        pdf.add_title("No Violations Found")
+        pdf.ln(5)
+        
         pdf.set_font('Roboto', '', 10)
-        summary_text = "No violations found for the specified period.\n\n"
+        summary_text = "No violation data was found for the specified period."
         
         if period_info:
             start_date = period_info.get('start_date', 'Unknown')
             end_date = period_info.get('end_date', 'Unknown')
             driver_id = period_info.get('driver_uuid', 'All Drivers')
             
-            summary_text += f"""
-            Period: {start_date} to {end_date}
-            Driver ID: {driver_id}
-            """
+            pdf.add_info_row("Period Start:", start_date)
+            pdf.add_info_row("Period End:", end_date)
+            pdf.add_info_row("Driver ID:", driver_id)
         
-        pdf.multi_cell(0, 10, summary_text)
         pdf.output(filename)
+        
+        # Schedule cleanup
+        FileCleanupManager.get_instance().schedule_cleanup(filename, cleanup_minutes)
         return filename
 
     # Group data by driver
@@ -247,104 +246,107 @@ def generate_driver_report(trend_data: List[Dict[str, Any]],
     total_drivers = len(driver_reports)
     total_violations = sum(sum(r["total_violations"] for r in reports) 
                          for reports in driver_reports.values())
+    high_risk_count = len([d for d in driver_reports.values() 
+                        if sum(r['total_violations'] for r in d) > 10])
     
-    # Report Header
-    pdf.chapter_title("Executive Summary")
+    # Add report title and summary
+    pdf.add_title("Executive Summary")
+    pdf.ln(2)
+    
+    # Add period info
+    period_text = f"{trend_data[0]['time_period']} to {trend_data[-1]['time_period']}"
+    pdf.add_info_row("Report Period:", period_text)
     pdf.ln(5)
     
-    # Summary Statistics
-    pdf.set_font('Roboto', 'B', 12)
-    pdf.set_text_color(**COLORS['text'])
-    period_text = f"Report Period: {trend_data[0]['time_period']} to {trend_data[-1]['time_period']}"
-    pdf.cell(0, 10, period_text, ln=True)
-    
-    pdf.set_font('Roboto', '', 10)
-    summary_text = f"""
-Total Drivers Analyzed: {total_drivers}
-Total Violations: {total_violations}
-High Risk Drivers: {len([d for d in driver_reports.values() if sum(r['total_violations'] for r in d) > 10])}
-"""
-    for line in summary_text.strip().split('\n'):
-        pdf.cell(0, 8, line.strip(), ln=True)
-    
+    # Add key metrics
+    pdf.add_info_row("Total Drivers:", total_drivers)
+    pdf.add_info_row("Total Violations:", total_violations)
+    pdf.add_info_row("High Risk Drivers:", high_risk_count)
     pdf.ln(5)
     
-    # Fleet Overview Section
-    pdf.section_title("Fleet Overview")
+    # Fleet Overview
+    pdf.add_subtitle("Fleet Overview")
     
-    # Generate and add Fleet-wide Statistics
+    # Generate fleet-wide statistics
     all_violations = {}
     for driver_uuid, reports in driver_reports.items():
         for report in reports:
             for v_type, count in report.get("violation_types", {}).items():
                 all_violations[v_type] = all_violations.get(v_type, 0) + count
     
-    # Add Fleet-wide Violation Chart on first page
+    # Add fleet chart
     if all_violations:
-        chart_image = create_modern_chart(
+        chart_image = create_clean_chart(
             all_violations,
-            "Fleet-wide Violation Distribution",
+            "Violation Distribution by Type",
             'pie'
         )
-        pdf.image(io.BytesIO(chart_image), x=15, w=180)  # Adjusted position and width
+        pdf.image(io.BytesIO(chart_image), x=30, w=150)
     
-    # Individual Driver Reports (starting from page 2)
+    # Individual Driver Reports
     for driver_uuid, reports in driver_reports.items():
         pdf.add_page()
         sample_report = reports[0]
+        driver_name = sample_report.get('driver_name', 'Unknown')
         
-        # Driver Header
-        pdf.chapter_title(f"Driver Analysis: {sample_report.get('driver_name', 'Unknown')}")
+        # Driver header
+        pdf.add_title(f"Driver: {driver_name}")
         
-        # Driver Statistics
+        # Driver statistics
         total_violations = sum(r["total_violations"] for r in reports)
         high_severity = sum(r.get("high_severity_count", 0) for r in reports)
         
-        pdf.section_title("Key Statistics")
-        pdf.set_font('Roboto', '', 10)
-        pdf.cell(0, 10, f"Total Violations: {total_violations}", ln=True)
-        pdf.cell(0, 10, f"High Severity Incidents: {high_severity}", ln=True)
+        pdf.add_info_row("Total Violations:", total_violations)
+        pdf.add_info_row("High Severity Incidents:", high_severity)
+        pdf.ln(5)
         
-        # Violation Types Chart
+        # Violation chart
+        pdf.add_subtitle("Violation Distribution")
+        
         violation_types = {}
         for report in reports:
             for v_type, count in report.get("violation_types", {}).items():
                 violation_types[v_type] = violation_types.get(v_type, 0) + count
         
-        pdf.section_title("Violation Distribution")
-        chart_image = create_modern_chart(
-            violation_types,
-            f"Violation Types - {sample_report.get('driver_name', 'Unknown')}",
-            'bar'
-        )
-        pdf.image(io.BytesIO(chart_image), x=10, w=190)
+        if violation_types:
+            chart_image = create_clean_chart(
+                violation_types,
+                f"Violations by Type - {driver_name}",
+                'bar'
+            )
+            pdf.image(io.BytesIO(chart_image), x=15, w=180)
         
         # Recommendations
-        pdf.section_title("Safety Recommendations")
+        pdf.add_subtitle("Safety Recommendations")
         latest_report = max(reports, key=lambda x: x["time_period"])
-        pdf.set_text_color(0, 0, 0)
-        pdf.multi_cell(0, 10, latest_report.get("action", "No specific recommendations"))
+        pdf.set_font('Roboto', '', 10)
+        pdf.multi_cell(0, 6, latest_report.get("action", "No specific recommendations"))
+        pdf.ln(5)
         
-
+        # Violation details table
+        pdf.add_subtitle("Violation Details")
+        
         # Table headers
-        pdf.set_fill_color(240, 240, 240)
-        pdf.cell(40, 10, "Date", 1, 0, 'C', 1)
-        pdf.cell(30, 10, "Violations", 1, 0, 'C', 1)
-        pdf.cell(60, 10, "Top Violation", 1, 0, 'C', 1)
-        pdf.cell(60, 10, "Severity", 1, 1, 'C', 1)
+        headers = ["Date", "Count", "Top Type", "Severity"]
         
+        # Table data
+        table_data = []
         for report in sorted(reports, key=lambda x: x["time_period"]):
-            pdf.cell(40, 10, report['time_period'], 1)
-            pdf.cell(30, 10, str(report['total_violations']), 1)
-            pdf.cell(60, 10, report['top_type'], 1)
-            pdf.cell(60, 10, "High" if report.get("high_severity_count", 0) > 0 else "Normal", 1)
-            pdf.ln()
+            severity = "High" if report.get("high_severity_count", 0) > 0 else "Normal"
+            table_data.append([
+                report['time_period'], 
+                str(report['total_violations']), 
+                report['top_type'], 
+                severity
+            ])
+        
+        pdf.add_table(headers, table_data)
     
+    # Output the PDF
     pdf.output(filename)
     
     # Schedule cleanup
-    cleanup_manager = FileCleanupManager.get_instance()
-    cleanup_manager.schedule_cleanup(filename, cleanup_minutes)
+    FileCleanupManager.get_instance().schedule_cleanup(filename, cleanup_minutes)
     
     return filename
 
